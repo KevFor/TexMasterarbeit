@@ -4,5 +4,8 @@ git add .
 git commit -a
 #Kommentar eingeben
 ctrl - x 
+y
+eingabe
+git push
 
 gitk
