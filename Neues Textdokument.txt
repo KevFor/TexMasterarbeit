@@ -1,0 +1,8 @@
+in /content bash here
+
+git add .
+git commit -a
+#Kommentar eingeben
+ctrl - x 
+
+gitk
