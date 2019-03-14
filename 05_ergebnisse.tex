@@ -1,46 +1,116 @@
 \chapter{Ergebnisse}
+In diesem Kapitel sind die Massenspektren für kleine und große Cluster aufgeführt.
+Anhand des stabilen Signals von Fe$_1$ wurde der Fokus des Clusterstrahls untersucht.
+% Einige Schwierigkeiten bei der Inbetriebnahme bzw bei längerer Inbetriebnahme
+Mit der erfolgreichen Inbetriebnahme der Schleusenkammer ist die Deposition auf ITO möglich und Depositionsmenge wird abgeschätzt.
+Nach der Deposition folgten \textit{ex situ} UV/vis Spektroskopie Messungen.
+
+% auch AFM Messungen aber nur Substrat, hier Cluster nicht abgebildet
 \section{Massenspektren bzw Strom}
+Nur FC oder auch Chtr? \ref{fig:cluster_chtr}
+Massenspektren kleine und große Cluster
+Strom kann auch 2 pA sein, siehe Quelltext, name des Spektrums %2018-11-21_04_mass1000-250000_wait500_step1000_tw15_FC2_Quelle0cm_Iris9,08_13Watt
+Strom 4 pA für Fe1 siehe FC messung in Abh von x
 hier Spektren bzw Strom in Chtr bzw FC2 zeigen. Optiken funktionieren, anschauen von Fokus von Fe1 im FC2.
 Für Strahlfokus die entsprechenden Abbildungen zeigen.
+\ref{fig:cluster_chtr}
+
+\begin{figure}
+    \begin{subfigure}[t]{0.475\textwidth}
+      \includegraphics[width=\textwidth]{./fig/cluster_small.pdf}
+      \caption{Caption....}
+      \label{fig:cluster_small}
+    \end{subfigure}\hfill
+    \begin{subfigure}[t]{0.475\textwidth}
+      \includegraphics[width=\textwidth]{./fig/cluster_medium.pdf}
+      \caption{Caption..}
+      \label{fig:cluster_medium}
+    \end{subfigure}
+    \caption{\ref{fig:cluster_small} und \ref{fig:cluster_medium} Clsuterstrom in chtr für kleiner Cluster bis $Fe_{30}$.} 
+    \label{fig:cluster_chtr}
+\end{figure}
+
+
+
 \section{Strahlfokus}
+Mit dem stabilen Signals von Fe$_1$ wurde der Fokus des Clusterstrahls untersucht.
+Für große Cluster war dies nicht möglich weil da Signal zu Untergrund Verhältnis zu schlecht war.
+
+messdaten = faltung von realem strahlprofil mit fc öffnung
+vergleich von messdaten mit faltung 
+
 So wie in Vortrag zeigen, dass hier nur FC1 Strom
 Hier Fokus \ref{fig:faltung} statt unter Kapitel Simulation
 \begin{figure}
     \centering
-    \includegraphics[scale=0.9]{./fig/Faltung2.pdf}
+    \includegraphics[scale=0.9]{./fig/faltung.pdf}
     \caption{Abbildung überarbeiten und genau beschreiben oben mitte unten jewiels gneau.}
     \label{fig:faltung}
 \end{figure}
+
 \section{Probleme? schwankungen, strom läuft weg - oxidieren}
 Stabilität des Stroms
-Schwanken des Stroms, vor und nach Depo bzw zwischendurch kontrollieren - Strom sinkt bzw schiebt zu anderen Massen
+Schwanken des Stroms (Kryo), vor und nach Depo bzw zwischendurch kontrollieren - 
+Strom sinkt bzw schiebt zu anderen Massen (thermisch bzw Optiken-Iris, Skimmer beschichtet)
+
+Mehr Strom/Depodauer nötig (Diskussion), gestaltet sich aber schwierig das umzusetzen.. 
+oxidieren justage strom haut ab blabla
 
 
+\section{Deposition}
+Sagen das 2 mal Depo, erstes mal aber hinterher kein Strom, nicht klar wann weg
+zweite depo nach 1 std strom kontrolliert und an 2 tagen deponiert weil Strom ganz weg gelaufen ist.
+Abschätzung wie viel belegt - Strom (vorher nachher) minus Untergrund und Depospot größe => x CML
+hier etwas genauer Deposioton erlären, pAmin erklären etc, 2 Tage vorher nacher Strom 
 
-
-
-
-
-
-
-
-
-
-
-
+Depo von großen Clustern siehe \ref{fig:cluster_big}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.9]{./fig/cluster_big.pdf}
+    \caption{Caption cpation cpation.}
+    \label{fig:cluster_big}
+\end{figure}
 
 \newpage
 \section{UV/vis Spektroskopie}
 Die UV/vis Spektroskopie wird im Rahmen dieser Arbeit genutzt um den Depositionsfleck zu finden.
 Dafür wurde der.....
-Ablauf \ref{fig:uvvis_raster} vlt in anderem/früheren Kapitel
+Ablauf \ref{fig:uvvis_ablauf} vlt in anderem/früheren Kapitel
+
+% \begin{figure}
+%     \centering
+%     \includegraphics[scale=0.6]{./fig/uvvis_raster.png}
+%     \caption{l. raster, oben r. Glasträger mit ITO / Probe ITO in sample holder bild raus
+%      zeilenweise gerastert sagen dass x8 y15 mehrmals aufgenommen wurde, refrenzstelle für optische stabilität    Caption Caption Caption Caption Caption Caption Caption .}
+%     \label{fig:uvvis_raster}
+% \end{figure}
+
+\begin{figure}
+    \begin{subfigure}[t]{0.65\textwidth}
+      \includegraphics[width=\textwidth]{./fig/uvvis_raster.png}
+      \caption{l. raster, oben r. Glasträger mit ITO / Probe ITO in sample holder bild raus
+      zeilenweise gerastert sagen dass x8 y15 mehrmals aufgenommen wurde, refrenzstelle für optische stabilität    Caption Caption Caption Caption Caption Caption Caption .}
+      \label{fig:uvvis_raster}
+    \end{subfigure}\hfill
+    \begin{subfigure}[t]{0.325\textwidth}
+      \includegraphics[width=\textwidth]{./fig/uvvis_probe.png}
+      \caption{ITO auf Glasträger ....}
+      \label{fig:uvvis_probe}
+    \end{subfigure}
+    \caption{\ref{fig:uvvis_raster} Ablauf und \ref{fig:uvvis_probe} Probe.......} 
+    \label{fig:uvvis_ablauf}
+\end{figure}
+
+\subsection{Scout Rechnung}
+\label{sec:scoutsim}
+Hier Scout von Alex \ref{fig:scout}
+Erwartete Absorption für Eisen Film als effektives Medium in Vakuum mit maxwell garnett \cite{Thei.1993} berechnet von Alex Kononov mit Scout
 
 \begin{figure}
     \centering
-    \includegraphics[scale=0.6]{./fig/uvvis_raster-probe.png}
-    \caption{l. raster, oben r. Glasträger mit ITO / Probe ITO in sample holder bild raus
-     zeilenweise gerastert sagen dass x8 y15 mehrmals aufgenommen wurde, refrenzstelle für optische stabilität    Caption Caption Caption Caption Caption Caption Caption .}
-    \label{fig:uvvis_raster}
+    \includegraphics[scale=0.8]{./fig/scout.png}
+    \caption{Caption Caption Caption Caption Caption Caption Caption .}
+    \label{fig:scout}
 \end{figure}
 
 \subsection{Optische Stabilität}
@@ -74,21 +144,23 @@ Referenz im Laufe der Messung zeigen.
 Keine Cluster im Rahmen der Messgenauigkeit zu sehen.
 
 \subsection{Probeninhomogenität}
+Absorption bzgl referenzstelle xy 
+Absorption im Bereich 550 bis 650nm an den jeweiligen Probenstellen aufgetragen
+
 
 Hier Heatmap und Kratzer zeigen
 Messgenauigkeit hinsichtlich Probeninhomogenität
+Zum einen weglaufen Referenz, Probeninhomogenitäten und starke Abweichungen wie Kratzer (mit Lichtmikroskop auflösbar - vergrößerung bzw größe Kratzer sagen - erkennbar wärhend UV/vis(bloßes Auge) bzw Lichtmikroskop, nicht ohne Hilfsmittel)
 Inhomegintät eine Prozent so wie Signal
 Kratzer deutlich stärker, mehrere Prozent / deutlich mehr als 1 Prozent in Absorption
 
 \begin{figure}
     \centering
-    \includegraphics[scale=0.5]{./fig/uvvis_map.png}
+    \includegraphics[scale=0.7]{./fig/uvvis_map.png}
     \caption{Caption Caption Caption Caption Caption Caption Caption Caption Caption Caption Caption Caption Caption Caption Caption Caption Caption Caption .}
     \label{fig:uvvis_map}
 \end{figure}
 
-\subsection{Probleme Inbetriebnahme}
-Mehr Strom/Depodauer nötig (Diskussion), gestaltet sich aber schwierig das umzusetzen.. oxidieren justage strom haut ab blabla
 \section{AFM}
 Ito lässt sich abbilden, Bild dazu, Aussage über Rauhigkeit treffen, genügend glatt?? \
 
