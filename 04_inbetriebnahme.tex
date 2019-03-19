@@ -1,5 +1,7 @@
 \chapter{Inbetriebnahme}
-Neues Kapitel aufmachen bzw wo kommen diese Teile hin?
+In diesem Kapitel wird zunächst die Konstruktion und Simulation der neuen Ionenoptiken in der Schleuse beschrieben.
+Anhand des stabilen Signals von Fe$_1$ wurde der Fokus des Clusterstrahls in der Schleuse untersucht.
+Danach sind die Massenspektren für kleine und große Cluster aufgeführt und es werden einige Störeffekte aufgeführt die beim Betrieb der CSA auftreten.
 \section{Konstruktion}
 Übergang - Depotube und Depooptiken halter/blende
 
@@ -49,12 +51,95 @@ konv und div strahl, die entsprechenden spannungen einfügen, siehe poster bilde
         \includegraphics[width=\textwidth]{./fig/simion_3.png}
         \caption{Konstruktion der Ionenoptiken in der Schleuse..., erzeugt mit freecad, cite freecad sofern möglich.}
         \label{fig:simion_3}
-      \end{subfigure}\hfill
-      \begin{subfigure}[t]{1\textwidth}
+    \end{subfigure}\hfill
+    \begin{subfigure}[t]{1\textwidth}
         \includegraphics[width=\textwidth]{./fig/simion_4.png}
         \caption{Ionenoptiken in der Schleuse eingbaut...}
         \label{fig:simion_4}
-      \end{subfigure}
+    \end{subfigure}
     \caption{Fokussierung des Ionenstrahl ausgehend von konvergentem und divergentem strahl.} 
     \label{fig:simion_param}
 \end{figure}
+
+\section{Strahlfokus}
+Mit dem stabilen und starken Signal von Fe$_1$ wurde der Fokus des Ionenstrahls in der Schleuse untersucht.
+Für große Cluster war dies wegen des schlechten Signal-Rausch-Verhältnisses nicht möglich.
+Der Faraday cup wurde entlang einer Achse senkrecht zum Strahl verschoben und der Ionenstrom gemessen, siehe Abb. \ref{fig:faltung}.
+Der gemessene Strom ergibt sich aus der Faltung des Faraday cups und der echten Strahlform.
+Daher wurde für den Faraday Cup mit einer Öffnung von etwa $\SI{2.5}{\mm}$ und den Ionenstrahl eine Faltung durchgeführt und diese manuell an die Messdaten angepasst.
+Bei der für den Clusterstrahl angenommenen Gauß-Verteilung ergibt sich für die Halbwertsbreite etwa $\SI{1.5}{\mm}$. 
+Bei Betrieb der CSA mit dem Oberflächenanalyse System und den dazugehörigen Depositionsoptiken ist der Durchmesser des Depositionsspot in etwa $\SI{1}{\mm}$ \cite[S. 40]{gronhagen}.
+% Verglichen damit kann mit dem simplen Aufbau der Ionenoptiken in der Schleuse ein angemessener Fokus erzielt werden.
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.9]{./fig/faltung2.pdf}
+    \caption{Abbildung überarbeiten und genau beschreiben oben mitte unten jewiels gneau.}
+    \label{fig:faltung}
+\end{figure}
+
+
+\section{Massenspektren bzw Strom}
+
+Nur FC oder auch Chtr? \ref{fig:cluster_chtr}
+Massenspektren kleine und große Cluster
+Strom kann auch 2 pA sein, siehe Quelltext, name des Spektrums %2018-11-21_04_mass1000-250000_wait500_step1000_tw15_FC2_Quelle0cm_Iris9,08_13Watt
+Strom 4 pA für Fe1 siehe FC messung in Abh von x
+hier Spektren bzw Strom in Chtr bzw FC2 zeigen. Optiken funktionieren, anschauen von Fokus von Fe1 im FC2.
+Für Strahlfokus die entsprechenden Abbildungen zeigen.
+\ref{fig:cluster_chtr}
+
+\begin{figure}
+    \begin{subfigure}[t]{0.475\textwidth}
+      \includegraphics[width=\textwidth]{./fig/cluster_small.pdf}
+      \caption{Caption....}
+      \label{fig:cluster_small}
+    \end{subfigure}\hfill
+    \begin{subfigure}[t]{0.475\textwidth}
+      \includegraphics[width=\textwidth]{./fig/cluster_medium.pdf}
+      \caption{Caption..}
+      \label{fig:cluster_medium}
+    \end{subfigure}
+    \caption{\ref{fig:cluster_small} und \ref{fig:cluster_medium} Clsuterstrom in chtr für kleiner Cluster bis $Fe_{30}$.} 
+    \label{fig:cluster_chtr}
+\end{figure}
+
+% \begin{figure}
+%   \begin{subfigure}[h]{1\textwidth}
+%     \includegraphics[width=\textwidth]{./fig/cluster_small.pdf}
+%     \caption{Eisen Ionen mit 1-10 Atomen bei einer Channeltronspannung von HV $= \SI{1000}{\volt}$.}
+%     \label{fig:cluster_small}
+%   \end{subfigure}\hfill
+%   \begin{subfigure}[t]{1\textwidth}
+%       \includegraphics[width=\textwidth]{./fig/cluster_medium.pdf}
+%       \caption{Clusterstrom gemessen mit dem Channeltron bei HV $= \SI{1000}{\volt}$. \SI{1500}{\volt}.}
+%       \label{fig:cluster_medium}
+%   \end{subfigure}
+%   \caption{Clusterstrom gemessen mit dem Channeltron im Massenselektor. Quelle optimiert für kleinere Cluster mit bis zu 10 \ref{fig:cluster_small} bzw. 28 Atomen \ref{fig:cluster_medium}.} 
+%   \label{fig:cluster_chtr}
+% \end{figure}
+
+
+\section{Störeffekte}
+Für die Probenherstellung beziehungsweise die Untersuchung von Clustern ist ein hoher stabiler Clusterstrom essentiell.
+Eine Abschätzung für die Depositionszeit gab es in \ref{sec:depo} und ein Strom von etwa $\SI{2}{\pA}$ konnte in der Schleuse für Fe$_{1790}$ realisiert werden.
+Bei dem Betrieb der CSA gibt es allerdings unerwünschte Störeffekte wie Intensitätseinbrüche \cite[S. 45]{gust}.
+Im Rahmen dieser Arbeit wurden Störeffekte bei der Messung des Stroms aber auch bei dem Betrieb der Clusterquelle beobachtet.\\
+
+Zum einen ....
+
+übliche werte irawan von ag ? siehe \cite - Eisen eine größenordnung strom weniger (Heinz), waurm? 
+
+
+kurze zeitskala kryo schwanken stört optimieren
+kryo aus option aber Untergrund steigt bzw generell mögliche verunreinigungen
+Lnagzeit stabilität, mehrere stunden depodauer, strom sollte auf die se skala stabil sein
+problem thermischer natur siehe strom in abh von leistung
+und Abnahme des stroms oxidieren / nach justieren erforderlich
+Stabilität des Stroms
+Schwanken des Stroms (Kryo), vor und nach Depo bzw zwischendurch kontrollieren - 
+Strom sinkt bzw schiebt zu anderen Massen (thermisch bzw Optiken-Iris, Skimmer beschichtet)
+
+Mehr Strom/Depodauer nötig (Diskussion), gestaltet sich aber schwierig das umzusetzen.. 
+oxidieren justage strom haut ab blabla
+

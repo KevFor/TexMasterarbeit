@@ -1,4 +1,4 @@
-in /content bash here
+in ordner /content: bash here
 
 git add .
 git commit -a
