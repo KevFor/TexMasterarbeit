@@ -92,15 +92,15 @@ Für Strahlfokus die entsprechenden Abbildungen zeigen.
 \begin{figure}
     \begin{subfigure}[t]{0.475\textwidth}
       \includegraphics[width=\textwidth]{./fig/cluster_small.pdf}
-      \caption{Caption....}
+      % \caption{}
       \label{fig:cluster_small}
     \end{subfigure}\hfill
     \begin{subfigure}[t]{0.475\textwidth}
       \includegraphics[width=\textwidth]{./fig/cluster_medium.pdf}
-      \caption{Caption..}
+      % \caption{Caption..}
       \label{fig:cluster_medium}
     \end{subfigure}
-    \caption{\ref{fig:cluster_small} und \ref{fig:cluster_medium} Clsuterstrom in chtr für kleiner Cluster bis $Fe_{30}$.} 
+    \caption{Massenspektren gemessen mit dem Channeltron, links $Fe_{1}$ bis $Fe_{10}$ und rechts $Fe_{12}$ bis $Fe_{28}$.} 
     \label{fig:cluster_chtr}
 \end{figure}
 
@@ -122,16 +122,26 @@ Für Strahlfokus die entsprechenden Abbildungen zeigen.
 
 \section{Störeffekte}
 Für die Probenherstellung beziehungsweise die Untersuchung von Clustern ist ein hoher stabiler Clusterstrom essentiell.
-Eine Abschätzung für die Depositionszeit gab es in \ref{sec:depo} und ein Strom von etwa $\SI{2}{\pA}$ konnte in der Schleuse für Fe$_{1790}$ realisiert werden.
+Eine Abschätzung für die Depositionszeit gab es in \ref{sec:depo} und ein Strom bis zu $\SI{2}{\pA}$ konnte in der Schleuse für Fe$_{1790}$ realisiert werden.
 Bei dem Betrieb der CSA gibt es allerdings unerwünschte Störeffekte wie Intensitätseinbrüche \cite[S. 45]{gust}.
-Im Rahmen dieser Arbeit wurden Störeffekte bei der Messung des Stroms aber auch bei dem Betrieb der Clusterquelle beobachtet.\\
+Im Rahmen dieser Arbeit wurden unerwünschte Effekte bei der Messung des Stroms und bei dem Betrieb der Clusterquelle beobachtet.\\
 
 Zum einen ....
+Wandern der Verteilung, bei hoch und runter drehen der quellenlesitung, hoch runter nicht gleich weil träges verhalten und nur wenige min spektrum gefahren und dann Leistung varieert. schneller varieert als verschieben eintritt
 
-übliche werte irawan von ag ? siehe \cite - Eisen eine größenordnung strom weniger (Heinz), waurm? 
+parasitärer Peak bei etwa 25k u erwähnen \cite{gust}
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=1]{./fig/leistung.pdf}
+  \caption{Massenspektren bei verschiedenen Leistungen der Clusterquelle, gemessen mit dem Channeltron. Die übliche Quellenleistung ist $\SI{12}{\watt}$. Zwischen den Spektren sind jeweils etwa $\SI{3}{\min}$ vergangen.}
+  \label{fig:leistung}
+\end{figure}
+ausschalten von kryo gas desorption \ref{fig:firstdepo}
+% übliche werte irawan von ag ? siehe \cite - Eisen eine größenordnung strom weniger (Heinz), waurm? 
 
 
-kurze zeitskala kryo schwanken stört optimieren
+kurze zeitskala kryo periodisches schwanken stört optimieren
 kryo aus option aber Untergrund steigt bzw generell mögliche verunreinigungen
 Lnagzeit stabilität, mehrere stunden depodauer, strom sollte auf die se skala stabil sein
 problem thermischer natur siehe strom in abh von leistung

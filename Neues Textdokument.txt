@@ -5,7 +5,11 @@ git commit -a
 #Kommentar eingeben
 ctrl - x 
 y
-eingabe
+eingabetaste
+
 git push
+
+KevFor
+ktown
 
 gitk

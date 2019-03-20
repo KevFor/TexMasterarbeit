@@ -1,30 +1,83 @@
 \chapter{Große Eisencluster auf ITO}
 % Einige Schwierigkeiten bei der Inbetriebnahme bzw bei längerer Inbetriebnahme
-Mit der erfolgreichen Inbetriebnahme der Schleusenkammer ist die Deposition auf ITO möglich und die Depositionsmenge wird abgeschätzt.
-Nach der Deposition folgten \textit{ex situ} UV/vis Spektroskopie Messungen. 
+Mit der erfolgreichen Inbetriebnahme der Schleusenkammer ist die Deposition auf ITO möglich. In desem Kapitel werden die Depositionsexperimente beschrieben.
+% und die Depositionsmenge wird abgeschätzt.
+Darauf folgen die Ergebnisse \textit{ex situ} UV/vis Spektroskopie Messungen. 
 
 % auch AFM Messungen aber nur Substrat, hier Cluster nicht abgebildet
 
 \section{Deposition}
+% Für die Untersuchung von großen Eisen Clustern wird eine Belegung von $0,1-0,2$ Monolagen angestrebt, weil dann die relalive Zahl koaleszierter Cluster weniger als 40 \% betragen sollte\cite[S. 88]{bsieben}.
+% Für das Profil des Ionenstrahls wird eine Gauss Verteilung erwartet, daher sollten auch bei höheren Belegungen die Randbereiche des Depositionsflecks genügend separierte Cluster aufweisen.
+% Für das Auffinden des Depospots bietet sich eine höhere Belegung von einer Monolage an, weil die erwartete Absorption dann auch größer ist.
+In Kapitel \ref{sec:depo} wurde berechnet, dass eine Depositionsmenge von $\SI{1200}{\pA\min}$ einer Monolage an Clustern entspricht.
+Da es zunächst darum geht erste Proben mit großen Eisen Clustern herzustellen und den Depositionsfleck zu charakterisieren wird eine Belegung von etwa einer Monolage angestrebt. 
+Das Maximum des Stroms war bei diversen Optimierungsversuchen zwischen $(80\,-\,100)\,\text{u}$.
+Es wurde beobachtet, dass sich nach Start der Quellenbetriebs auch ohne verändern von Parametern das Maximum ein wenig zu höheren Massen verschiebt, wie es auch bei der Erhöhung der Leistung beobachtet wurde.
+Daher wurde eine Masse von $\SI{100e3}{\amu}$, was $Fe_{1790}$ entspricht, für die Deposition auf ITO gewählt.\\
 
-
-
-Sagen das 2 mal Depo, erstes mal aber hinterher kein Strom, nicht klar wann weg
-zweite depo nach 1 std strom kontrolliert und an 2 tagen deponiert weil Strom ganz weg gelaufen ist.
-Abschätzung wie viel belegt - Strom (vorher nachher) minus Untergrund und Depospot größe => x CML
-hier etwas genauer Deposioton erlären, pAmin erklären etc, 2 Tage vorher nacher Strom 
-
-Depo von großen Clustern siehe \ref{fig:cluster_big}
-\begin{figure}
-    \centering
-    \includegraphics[scale=0.8]{./fig/cluster_big.pdf}
-    \caption{Caption cpation cpation.}
-    \label{fig:cluster_big}
+Durch Optimieren der Parameter der CSA konnte ein Strom von $\SI{2}{\pA}$ erreicht werden.
+Es wurde 8 Stunden lang deponiert und danach der Ionenstrom erneut gemessen, siehe Abb. \ref{fig:deposition} links.
+Bei der ausgewählten Clustermasse ist unter Berücksichtigung des Untergrunds kein Clusterstrom mehr vorhanden. 
+Außerdem befindet sich das Maximum der Verteilung bei etwa $\SI{160e3}{\amu}$.
+Wegen dieser Tatsachen ist keine zuverlässige Abschätzung der Belegung möglich.\\
+\begin{figure}[h]
+  \begin{subfigure}[t]{0.475\textwidth}
+    \includegraphics[width=\textwidth]{./fig/firstdepo.pdf}
+    \caption{Erstes Depositionsexperiment von Eisen Clustern, abgebildet sind die Spektren vor und nach der Deposition.}
+    \label{fig:firstdepo}
+  \end{subfigure}\hfill
+  \begin{subfigure}[t]{0.475\textwidth}
+    \includegraphics[width=\textwidth]{./fig/seconddepo.pdf}
+    \caption{Abgebildet sind die Spektren des zweiten Depositionsexperiments. Es handelt sich hier um den ersten von zwei Tagen.}
+    \label{fig:seconddepo}
+  \end{subfigure}
+  \caption{Ionenstrom von großen Clustern gemessen in der Schleuse bei ausgeschalter Kryopumpe.} 
+  \label{fig:deposition}
 \end{figure}
 
+In einem Zweiten Depositionsexperiment wird der Ionenstrom alle $60 - \SI{90}{\min}$ kontrolliert und wenn möglich optimiert.
+In Abb. \ref{fig:deposition} rechts sind die Massenspektren vor, zwischen und nach einer Depositionsschritt abgebildet. 
+Nachdem der Strom an einem Tag bei $\SI{0.6}{\pA}$ war und sich nicht optimieren lies,sondern soger weiter gesunken ist, wurde an einem anderen Tag erneut deponiert.
+In Tabelle \ref{tab:depo2} ist eine Abschätzung für die Depositionsmenge mit den vom Untergrund bereinigten Ionenströme und Depositionsdauern aufgetragen. Der gemittelte und vom Untergrund bereinigte Ionenstrom $I_{\text{clean}}$ wird über
+\begin{align*}
+  I_{\text{clean}}=\frac{I_{\text{vor}}+I_{\text{nach}}}{2}-I_{\text{Untergrund}}
+\end{align*} 
+berechnet. Es ergibt sich für die Belgung ein Wert von $\SI{200}{\pA\min}$, welcher sich mit der Annahme aus \ref{sec:depo} in $0,15\,$ML übersetzt.
+
+\begin{table}
+  \centering
+  \caption{Abschätzung für die zweite Deposition. Augetragen sind die Ionenströme $I_{\text{vor}}$ vor und $I_{\text{nach}}$ nach einem Depositionsabschnitt, der Untergrund $I_{\text{Untergrund}}$, der gemittelte und vom Untergrund bereinigte Strom $I_{\text{clean}}$, die Zeit $t_{\text{Depo}}$ eines Depositionsabschnitt sowie die damit verbundene Belegung.}
+  \label{tab:depo2}
+  \begin{tabular}{lllllll}
+      \toprule
+      & $I_{\text{vor}}\,/\,\si{\pA}$	&	$I_{\text{nach}}$\,/\,\si{\pA}	& $I_{\text{Untergrund}}\,/\,\si{\pA}$		&	$I_{\text{clean}}\,/\,\si{\pA}$	&	$t_{\text{Depo}}\,/\,\si{\min}$	&	$\text{Belegung}\,/\,\si{\pA\min}$	\\
+      \midrule
+      &1,13	&	1,45	&	0,3	&	0,99	&	60	&	59,4	\\
+      &1,19	&	0,62	&	0,3	&	0,605	&	108	&	65,3	\\
+      &1,15	&	0,87	&	0,25	&	0,76	&	50	&	38	\\
+      &0,9	&	0,75	&	0,2	&	0,625	&	61	&	38,1	\\
+	    &      &			&		&		&		&		\\
+	    $\sum$&     		&		&		&		&		&	200,8	\\
+      \bottomrule
+  \end{tabular}
+\end{table}
+
+
+% Depo von großen Clustern siehe \ref{fig:cluster_big}
+% \begin{figure}
+%     \centering
+%     \includegraphics[scale=0.8]{./fig/cluster_big.pdf}
+%     \caption{Caption cpation cpation.}
+%     \label{fig:cluster_big}
+% \end{figure}
+
 \section{UV/vis Spektroskopie}
-Die UV/vis Spektroskopie wird im Rahmen dieser Arbeit genutzt um die Position und die Größe des Depositionsflecks zu untersuchen.
-Da es nicht möglich war den Depositionsfleck auf Anhieb zu finden wurde die Probe, unter Verwendung einer $\SI{1}{\mm}$ Blende abgerastert, siehe Abb. \ref{fig:uvvis_ablauf}.
+Die UV/vis Spektroskopie wird im Rahmen dieser Arbeit genutzt um die Charakteristik des Depositionsflecks zu untersuchen.
+Die Cluster konnten im Rahmen der optischen Messungen bisher nicht.
+Im folgenden werden die optische Stabilität der Messung und die Homogenität des untersuchten Probensystems vorgestellt.
+Dies geschieht anhand einer Messreihe, siehe Abb. \ref{fig:uvvis_ablauf}.
+% Da es nicht möglich war den Depositionsfleck zu finden wurde die Probe, unter Verwendung einer $\SI{1}{\mm}$ Blende abgerastert, siehe Abb. \ref{fig:uvvis_ablauf}.
 % \begin{figure}
 %     \centering
 %     \includegraphics[scale=0.6]{./fig/uvvis_raster.pdf}
@@ -42,7 +95,7 @@ Da es nicht möglich war den Depositionsfleck auf Anhieb zu finden wurde die Pro
     \end{subfigure}\hfill
     \begin{subfigure}[b]{0.325\textwidth}
       \includegraphics[width=\textwidth]{./fig/uvvis_probe.png}
-      \caption{ITO Glasträger befestigt auf einem weiteren Glasträger welcher in dem UV/vis Aufbau eingespannt wird. In grün eingezeichnet ist der Bereich in dem die Probe abgerastert wurde.}
+      \caption{ITO Glasträger der zweiten Deposition, befestigt auf einem weiteren Glasträger welcher in dem UV/vis Aufbau eingespannt wird. In grün eingezeichnet ist der Bereich in dem die Probe abgerastert wurde.}
       \label{fig:uvvis_probe}
     \end{subfigure}
     \caption{Messablauf \ref{fig:uvvis_raster} der Spektroskopie und die Probe \ref{fig:uvvis_probe}.} 
@@ -52,7 +105,7 @@ Da es nicht möglich war den Depositionsfleck auf Anhieb zu finden wurde die Pro
 
 \subsection{Optische Stabilität}
 Wie in Kapitel \ref{sec:scoutsim} beschrieben, wird eine Absorption von weniger als einem Prozent erwartet.
-Ein systematischer Störeffekt bei der Absorption ist die Veränderung der Intensität der Lampe.
+Ein systematischer Störeffekt während der Messung ist die Veränderung der Intensität der Lampe.
 % Dies führt dazu, dass auf der gleichen Probenstelle eine veränderte Absorption gemessen wird.
 Daher wurde bei dem Rastern der Probe nach jeder Zeile die Referenzstelle wiederholt gemessen.
 In Abbildung \ref{fig:uvvis_ref} ist diese Veränderung innerhalb einer Messreihe zu sehen.
