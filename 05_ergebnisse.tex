@@ -17,17 +17,17 @@ Es wurde beobachtet, dass sich nach Start der Quellenbetriebs auch ohne verände
 Daher wurde eine Masse von $\SI{100e3}{\amu}$, was $Fe_{1790}$ entspricht, für die Deposition auf ITO gewählt.\\
 
 Durch Optimieren der Parameter der CSA konnte ein Strom von $\SI{2}{\pA}$ erreicht werden.
-Es wurde 8 Stunden lang deponiert und danach der Ionenstrom erneut gemessen, siehe Abb. \ref{fig:deposition} links.
+Es wurde 8 Stunden lang deponiert und danach der Ionenstrom erneut gemessen, siehe Abb. \ref{fig:firstdepo}.
 Bei der ausgewählten Clustermasse ist unter Berücksichtigung des Untergrunds kein Clusterstrom mehr vorhanden. 
 Außerdem befindet sich das Maximum der Verteilung bei etwa $\SI{160e3}{\amu}$.
 Wegen dieser Tatsachen ist keine zuverlässige Abschätzung der Belegung möglich.\\
 \begin{figure}[h]
-  \begin{subfigure}[t]{0.475\textwidth}
+  \begin{subfigure}[h]{\textwidth}
     \includegraphics[width=\textwidth]{./fig/firstdepo.pdf}
     \caption{Erstes Depositionsexperiment von Eisen Clustern, abgebildet sind die Spektren vor und nach der Deposition.}
     \label{fig:firstdepo}
   \end{subfigure}\hfill
-  \begin{subfigure}[t]{0.475\textwidth}
+  \begin{subfigure}[t]{\textwidth}
     \includegraphics[width=\textwidth]{./fig/seconddepo.pdf}
     \caption{Abgebildet sind die Spektren des zweiten Depositionsexperiments. Es handelt sich hier um den ersten von zwei Tagen.}
     \label{fig:seconddepo}
@@ -37,8 +37,8 @@ Wegen dieser Tatsachen ist keine zuverlässige Abschätzung der Belegung möglic
 \end{figure}
 
 In einem Zweiten Depositionsexperiment wird der Ionenstrom alle $60 - \SI{90}{\min}$ kontrolliert und wenn möglich optimiert.
-In Abb. \ref{fig:deposition} rechts sind die Massenspektren vor, zwischen und nach einer Depositionsschritt abgebildet. 
-Nachdem der Strom an einem Tag bei $\SI{0.6}{\pA}$ war und sich nicht optimieren lies,sondern soger weiter gesunken ist, wurde an einem anderen Tag erneut deponiert.
+In Abb. \ref{fig:seconddepo} sind die Massenspektren vor, zwischen und nach einer Depositionsschritt abgebildet. 
+Weil der Strom nach einem Depositionsschritt bei $\SI{0.6}{\pA}$ war und sich nicht optimieren lies, sondern soger weiter gesunken ist, wurde an einem anderen Tag erneut deponiert.
 In Tabelle \ref{tab:depo2} ist eine Abschätzung für die Depositionsmenge mit den vom Untergrund bereinigten Ionenströme und Depositionsdauern aufgetragen. Der gemittelte und vom Untergrund bereinigte Ionenstrom $I_{\text{clean}}$ wird über
 \begin{align*}
   I_{\text{clean}}=\frac{I_{\text{vor}}+I_{\text{nach}}}{2}-I_{\text{Untergrund}}
@@ -49,16 +49,16 @@ berechnet. Es ergibt sich für die Belgung ein Wert von $\SI{200}{\pA\min}$, wel
   \centering
   \caption{Abschätzung für die zweite Deposition. Augetragen sind die Ionenströme $I_{\text{vor}}$ vor und $I_{\text{nach}}$ nach einem Depositionsabschnitt, der Untergrund $I_{\text{Untergrund}}$, der gemittelte und vom Untergrund bereinigte Strom $I_{\text{clean}}$, die Zeit $t_{\text{Depo}}$ eines Depositionsabschnitt sowie die damit verbundene Belegung.}
   \label{tab:depo2}
-  \begin{tabular}{lllllll}
+  \begin{tabular}{llllll}
       \toprule
-      & $I_{\text{vor}}\,/\,\si{\pA}$	&	$I_{\text{nach}}$\,/\,\si{\pA}	& $I_{\text{Untergrund}}\,/\,\si{\pA}$		&	$I_{\text{clean}}\,/\,\si{\pA}$	&	$t_{\text{Depo}}\,/\,\si{\min}$	&	$\text{Belegung}\,/\,\si{\pA\min}$	\\
+       $I_{\text{vor}}\,/\,\si{\pA}$	&	$I_{\text{nach}}$\,/\,\si{\pA}	& $I_{\text{Untergrund}}\,/\,\si{\pA}$		&	$I_{\text{clean}}\,/\,\si{\pA}$	&	$t_{\text{Depo}}\,/\,\si{\min}$	&	$\text{Belegung}\,/\,\si{\pA\min}$	\\
       \midrule
-      &1,13	&	1,45	&	0,3	&	0,99	&	60	&	59,4	\\
-      &1,19	&	0,62	&	0,3	&	0,605	&	108	&	65,3	\\
-      &1,15	&	0,87	&	0,25	&	0,76	&	50	&	38	\\
-      &0,9	&	0,75	&	0,2	&	0,625	&	61	&	38,1	\\
-	    &      &			&		&		&		&		\\
-	    $\sum$&     		&		&		&		&		&	200,8	\\
+      1,13	&	1,45	&	0,3	&	0,99	&	60	&	59,4	\\
+      1,19	&	0,62	&	0,3	&	0,605	&	108	&	65,3	\\
+      1,15	&	0,87	&	0,25	&	0,76	&	50	&	38	\\
+      0,9	&	0,75	&	0,2	&	0,625	&	61	&	38,1	\\
+            &			&		&		&		&		\\
+         		&		&		&		&	 	&	$\sum$ = 200,8	\\
       \bottomrule
   \end{tabular}
 \end{table}
@@ -67,20 +67,21 @@ berechnet. Es ergibt sich für die Belgung ein Wert von $\SI{200}{\pA\min}$, wel
 % Depo von großen Clustern siehe \ref{fig:cluster_big}
 % \begin{figure}
 %     \centering
-%     \includegraphics[scale=0.8]{./fig/cluster_big.pdf}
+%     \includegraphics[width=\textwidth]{./fig/cluster_big.pdf}
 %     \caption{Caption cpation cpation.}
 %     \label{fig:cluster_big}
 % \end{figure}
 
 \section{UV/vis Spektroskopie}
 Die UV/vis Spektroskopie wird im Rahmen dieser Arbeit genutzt um die Charakteristik des Depositionsflecks zu untersuchen.
-Die Cluster konnten im Rahmen der optischen Messungen bisher nicht.
-Im folgenden werden die optische Stabilität der Messung und die Homogenität des untersuchten Probensystems vorgestellt.
+Die Cluster konnten im Rahmen der optischen Messungen bisher nicht nachgewiesen werden.
+Im folgenden soll eine Abschätzung für das zu erwartende Signal gegeben werden.
+Danach werden die optische Stabilität der Messung und die Homogenität des Probensystems untersuchten.
 Dies geschieht anhand einer Messreihe, siehe Abb. \ref{fig:uvvis_ablauf}.
 % Da es nicht möglich war den Depositionsfleck zu finden wurde die Probe, unter Verwendung einer $\SI{1}{\mm}$ Blende abgerastert, siehe Abb. \ref{fig:uvvis_ablauf}.
 % \begin{figure}
 %     \centering
-%     \includegraphics[scale=0.6]{./fig/uvvis_raster.pdf}
+%     \includegraphics[width=\textwidth]{./fig/uvvis_raster.pdf}
 %     \caption{l. raster, oben r. Glasträger mit ITO / Probe ITO in sample holder bild raus
 %      zeilenweise gerastert sagen dass x8 y15 mehrmals aufgenommen wurde, refrenzstelle für optische stabilität    Caption Caption Caption Caption Caption Caption Caption .}
 %     \label{fig:uvvis_raster}
@@ -98,10 +99,27 @@ Dies geschieht anhand einer Messreihe, siehe Abb. \ref{fig:uvvis_ablauf}.
       \caption{ITO Glasträger der zweiten Deposition, befestigt auf einem weiteren Glasträger welcher in dem UV/vis Aufbau eingespannt wird. In grün eingezeichnet ist der Bereich in dem die Probe abgerastert wurde.}
       \label{fig:uvvis_probe}
     \end{subfigure}
-    \caption{Messablauf \ref{fig:uvvis_raster} der Spektroskopie und die Probe \ref{fig:uvvis_probe}.} 
+    \caption{Abgebildet ist der Messablauf beim Rastern und die Probe.} 
     \label{fig:uvvis_ablauf}
 \end{figure}
 % Die Integrationszeit eines einzelnen Scans war $\SI{8}{\ms}$ und für eine Spektrum wurde über 500 Scans gemittelt.
+\subsection{Scout Rechnung}
+\label{sec:scoutsim}
+% abschätzung für messung nötig, zb kreibig vollmer 
+Im Falle der UV/vis Spektroskopie ist die Wellenlänge des Lichts viel größer als die Abmessungen der hier untersuchten Cluster und das Probensystem kann als effektives Medium betrachtet werden \cite[S. 149 ff.]{Thei.1993}.
+Die von Maxwell Garnett aufgestellte Formel für das effektive Medium beschreibt kugelförmige Partikel mit großem Abstand zueinander und ist somit einge gute Näherung für eine niedriger Clusterbelgung. 
+Für eine Abschätzung des zu erwartenden Absorptionsignals wurde ein $\SI{3}{\nm}$ dicker Film als effektives Medium in Vakuum mit Maxwell Garnett für verschiedene Füllfaktoren berechnet.
+Ein Füllfaktor von $0,075$ entspricht dabei $0,15$ Clustermonolagen.
+Die Berechnungen wurden von Alex Kononov zur Verfügung gestellt und sind in Abb. \ref{fig:scout} zu sehen.\\
+
+Die erwartete Absorption für eine Belegung von $0,15$ Clustermonolagen, wie sie für das zweite Depositionsexperiment abgeschätzt wurde \ref{tab:depo2}, beläuft sich auf $0,3 - 0,6\,\%$.
+Für kleine Wellenlängen ist dabei der größte Effekt zu erwarten und bei $\SI{400}{\nm}$ ergibt sich aus den Berechnungen noch eine Absorption von $0,4\,\%$. Die Empfindlichkeit der optischen Messungen sollte daher etwa $0,1\,\%$ sein.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\textwidth]{./fig/scout.pdf}
+  \caption{Abgebildet ist das Berechnete Absorptionsignal eines $\SI{3}{\nm}$ dicken Eisen Films in Vakuum, als effektives Medium mit Maxwell Garnett für verschiedene Füllfaktoren. Ein Füllfaktor von $0,075$ entspricht dabei $0,15$ Clustermonolagen. Rechnungen bereitgestellt von Alex Kononov.}
+  \label{fig:scout}
+\end{figure}
 
 \subsection{Optische Stabilität}
 Wie in Kapitel \ref{sec:scoutsim} beschrieben, wird eine Absorption von weniger als einem Prozent erwartet.
@@ -112,7 +130,7 @@ In Abbildung \ref{fig:uvvis_ref} ist diese Veränderung innerhalb einer Messreih
 Das erste und letzte Spektrum liegen dabei etwa $\SI{90}{\min}$ außeinander und die Lampe wurde ca. drei Stunden vor Beginn der Messreihe eingeschaltet.
 \begin{figure}
     \centering
-    \includegraphics[scale=0.7]{./fig/uvvis_ref.png}
+    \includegraphics[width=0.8\textwidth]{./fig/uvvis_ref.png}
     \caption{Abbildungs schöner machen.. achsenbeschriftung label etc., y-Skala zu Prozent machen Caption überarbeiten
     Absorptionsmessungen einer Referenzstelle im Laufe einer Messreihe.
     Die Spektren entsprechen den jeweiligen Zeilen im gleichen Farbton aus Abb. \ref{fig:uvvis_raster}.}
@@ -130,7 +148,7 @@ Die starke Absorption bei $x=\SI{7}{\mm}$ und $y=\SI{8}{\mm}$ lässt sich durch 
 Im mittleren Probenbereich sind die Abweichungen der Absorsption in einer Größenordung von etwa $\SI{1.5}{\%}$ und damit größer als das aus den Berechnungen erwartete Signal, vgl \ref{fig:scout}.
 \begin{figure}
     \centering
-    \includegraphics[scale=0.7]{./fig/uvvis_map.png}
+    \includegraphics[width=\textwidth]{./fig/uvvis_map.png}
     \caption{Abgebildet ist die integrierte Absorption der Spektren im Bereich von $\SI{350}{\nm}$ bis $\SI{500}{\nm}$. An den weißen Stellen gibt es keine Messungen, vgl Abb. \ref{fig:uvvis_ablauf}.}
     \label{fig:uvvis_map}
 \end{figure}

@@ -3,105 +3,387 @@ In diesem Kapitel wird zunächst die Konstruktion und Simulation der neuen Ionen
 Anhand des stabilen Signals von Fe$_1$ wurde der Fokus des Clusterstrahls in der Schleuse untersucht.
 Danach sind die Massenspektren für kleine und große Cluster aufgeführt und es werden einige Störeffekte aufgeführt die beim Betrieb der CSA auftreten.
 \section{Konstruktion}
-Übergang - Depotube und Depooptiken halter/blende
+Für die Schleusenkammer wurden zwei Baugruppen konstruiert, die Depotube welche als Führung des Clusterstrahls dient und die Depositonselemente bestehend aus Probenhalter und Blende. Die Modelle wurden mit FreeCAD\cite{freecad} erstellt und die finalen Versionen wurden von den Mitarbetern des Konstruktionsbüros der Fakultät Physik der TU Dortmund erstellt \cite{konstruktion}, die Zeichnungs Nummern von Depotube und Halterung+Blende sind >e1.1536.04.18< und >e1a.1548.06.18<.
+\\├
 
-Ionenoptiken in der Schleuse \ref{fig:schleuse_freecad} 
+Für den Übergang zwischen der M-Tube hinter dem Massenselektor und der der Schleuse wird eine Ionenoptik benötigt um den Clusterstrahl zu führen, dafür wurde die Depotube konstruiert, siehe Abb. \ref{fig:depotube}.
+An die Depotube wird im Betrieb eine Spannung von etwa $\SI{500}{\volt}$ angelegt, welche von den anderen Bauteilen isoliert sein soll.
+Für die Befestigung in der Anlage werden zwei Teflonschalen, durch zusammenschieben der Keile, gegen die Wand gepresst.
+Dafür wird eine Mutter aufgedreht und somit der Schieber und ein ringförmiger Keil bewegt.
+Der zweite Keil kann sich nicht bewegen, weil ein größeres Rohr mit Madenschrauben auf dem Grundrohr fixiert ist.
+Das größere Rohrstück welches übersteht, soll einen spaltfreien Übergang zwischen Depotube und der beweglichen M-Tube ermöglichen.
 
 \begin{figure}
-    \begin{subfigure}[t]{0.475\textwidth}
+  \begin{subfigure}[h]{1\textwidth}
+    \includegraphics[width=\textwidth]{./fig/uebergang1.png}
+    % \caption{}
+    % \label{fig:depotube3}
+  \end{subfigure}\hfill
+  \begin{subfigure}[h]{1\textwidth}
+    \includegraphics[width=\textwidth]{./fig/uebergang4.png}
+    % \caption{}
+    % \label{fig:depotube2}
+  \end{subfigure}\hfill
+  \begin{subfigure}[h]{1\textwidth}
+    \includegraphics[width=\textwidth]{./fig/depotube.png}
+    % \caption{}
+    % \label{fig:depotube2}
+  \end{subfigure}
+  \caption{Abgebildet ist der Übergang zwischen dem Massenselektor und die dort eingebaute Depotube.}
+  \label{fig:depotube}
+\end{figure}
+
+Die Ionenoptiken in der Schleuse sind die Blende und der Probenhalter, beide sind auf Lineardurchführungen montiert, siehe Abb. \ref{fig:schleuse_innen}.
+Beide Elemente bestehen aus gewinkelten Blechen mit Langlöchern und ermöglichen so eine Verschiebung entlang der Strahlachse.
+Ebenso wie die Depotube können auch die Depositionoptiken auf ein Potential gelegt werden.
+
+% Für die Befestigung auf den Lineardurchführung wurden Keramik Buchsen verwendet
+Mit der Blende kann die Flugbahn der Ionen beieinflusst werden, hierbei wurde ein Kreisring aus Edelstahlfolie befestigt um so eine homegenere elektrische Feldverteilung zu erreichen.
+Durch das Verschieben über die Lineardurchführung kann der Ionenstrahl teilweise oder ganz abgeschirmt werden.
+
+In den Probenhalter können zwei Probenplatten eingeführt werden.
+Die vorhandene Lineardurchführung lässt sich genug verfahren.
+Allerdings ist es dann nicht mehr möglich den gesamten Probenhalter so weit zurück zu fahren, dass der Faraday cup auf die gleiche Stelle entlang der Strahlachse gesetzt werden kann.
+\begin{figure}
+    \begin{subfigure}[t]{0.478\textwidth}
       \includegraphics[width=\textwidth]{./fig/schleuse_freecad.png}
-      \caption{Konstruktion der Ionenoptiken in der Schleuse..., erzeugt mit freecad, cite freecad sofern möglich.}
+      \caption{Modell der Depositionsoptiken in der Schleuse.}
       \label{fig:schleuse_freecad}
     \end{subfigure}\hfill
     \begin{subfigure}[t]{0.475\textwidth}
       \includegraphics[width=\textwidth]{./fig/schleuse_real.png}
-      \caption{Ionenoptiken in der Schleuse eingbaut...}
+      \caption{Ionenoptiken in der Schleuse eingbaut.}
       \label{fig:schleuse_real}
     \end{subfigure}
-    \caption{\ref{fig:schleuse_freecad} Konstruktion und \ref{fig:schleuse_real} eingebaut.} 
+    \caption{Innenraum der Schleuse, Modell und eingebaute Optiken.}
     \label{fig:schleuse_innen}
 \end{figure}
 
 
 \section{Simulation}
-Hier bisschen über simion \cite{Manura.2008} und yin \cite{Yin.2007} reden
+Mithilfe der Programms SIMION \cite{Manura.2008} wurde der gesamte bisherige Aufbau im Rahmen der Dissertation von Chunrong Yin \cite{Yin.2007} simuliert.
+Diese Arbeit beschränkt sich daher auf die Simulation der Ionenoptiken in der Schleusenkammer.
+Die Simulation erfolgt mit der SIMON Version 8.1.1.32 und die Information bezüglich des Programms weden dem Benutzerhandbuch entnommen.
+Ziel ist es ein Verständnis für die Funktionsweise von Ionenoptiken zu erhalten und gegebenfalls die für den Betrieb benötigten Spannungen zu erhalten.
 
-Ionenoptiken in der Schleuse \ref{fig:simion_schleuse} 
+\subsection{Einstieg}
+Im ersten Schritt wird auf einem Gitter eine Punktmatrix aus verschiedenen Elektroden erstellt welche dann das gewünschte Modell bilden.
+Dann berechnet SIMION das elektrische Potential für jede Stelle im Gitter durch Lösen der Laplace Gleichung mit den Elektroden als Randbedingungen.
+Den Elektroden werden Potentiale zugeordnet, die Ionen können definiert werden und die Simulation der Ionenflugbahn kann starten.
+
+Der simulierte Aufbau ist exemplarisch in Abb. \ref{fig:simion_schleuse} zu sehen. 
+Für die Ionenflugbahn wurden sowohl konvergente (blaue Linien) als auch ein divergente (grüne Linien) Startbedingungen betrachtet.
+Zu sehen ist die Seitenansicht des gesamten Strahlverlaufs vom Ausgang des Massenselektors bis zum Auftreffen auf den Faraday cup.
+In \ref{fig:0} wird das Auftreffen der Ionen auf den Faraday cup in der Schleuse näher betrachtet.
+\ref{fig:1} macht die Wirkungsweise von Ionenoptiken deutlich, in dem ein Ansichtsmodus gewählt wird, bei dem es so scheint, als würden sich die Ionen wie ein Ball verhalten der Hügel hinauf und herab rollt.
+
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=\textwidth]{./fig/simion_schleuse.png}
+%     \caption{Simulation des Clusterstrahls in der Schleuse....}
+%     \label{fig:simion_schleuse}
+% \end{figure}
 
 \begin{figure}
-    \centering
-    \includegraphics[scale=0.5]{./fig/simion_schleuse.png}
-    \caption{Simulation des Clusterstrahls in der Schleuse....}
-    \label{fig:simion_schleuse}
+  \centering
+  \begin{subfigure}[h]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{./fig/simion_schleuse.png}
+    \caption{3D Iso Ansicht der Ionenoptiken.}
+    \label{fig:0}
+  \end{subfigure}\hfill
+  \begin{subfigure}[h]{0.5\textwidth}
+    \includegraphics[width=\textwidth]{./fig/simion_schleuse2.png}
+    \caption{Im \textit{PE View} von SIMION sieht es so aus, als würden sich die Ionen wie ein Ball verhalten, der Hügel hinab und hinauf rollt.}
+    \label{fig:1}
+  \end{subfigure}\hfill
+  \begin{subfigure}[b]{1\textwidth}
+    \includegraphics[width=\textwidth]{./fig/simion_schleuse3.png}
+    \caption{Seitenansicht der simulierten Optiken im Übergang bis zur Schleuse.}
+    \label{fig:2}
+  \end{subfigure}
+  \caption{Simulation mit SIMION, in blau wird ein konvergenter Strahl angesetzt und in grün wird mit divergenten Anfangsbedingungen gestartet.}
+  \label{fig:simion_schleuse}
 \end{figure}
-konv und div strahl, die entsprechenden spannungen einfügen, siehe poster bilder ordner bzw simion bilder namen
+
+
+\subsection{Fokussierung des Ionenstrahls}
+Im folgenden soll die fokussierende Wirkung der Ionenoptiken betrachtet werden.
+Nach dem Austreten des Massenselektors passieren die Ionen die M-tube und werden mit der Depotube und der Blende weiter in die Schleuse geleitet bis sie auf den Faradaycup treffen.
+Die Flugbahn der Ionen wurde für divergente und konvergente Startbedingungen untersucht, siehe Abb. \ref{fig:simion_start}.
+Betrachtet wurden in jedem Durchlauf einfach positiv geladene Ionen mit einer Masse von $\SI{100000}{\amu}$ bzw. 1790 Fe Atome die ein Cluster bilden.
+Die Ionen wurden auf einer Kreisfläche mit $\SI{10}{\mm}$ verteilt und hatten eine Energie von $\SI{500}{\eV}$.
+Simuliert wurden die Ionentrajektorien von jeweils 5000 Ionen, wobei ein konvergenter und ein divergenter Austritt mit $\pm\,\SI{1}{\degree}$ des Massenselektors angenommen wurde.
 
 \begin{figure}
-    \begin{subfigure}[h]{1\textwidth}
-      \includegraphics[width=\textwidth]{./fig/simion_1.png}
-      \caption{Konstruktion der Ionenoptiken in der Schleuse..., erzeugt mit freecad, cite freecad sofern möglich.}
-      \label{fig:simion_1}
-    \end{subfigure}\hfill
-    \begin{subfigure}[t]{1\textwidth}
-      \includegraphics[width=\textwidth]{./fig/simion_2.png}
-      \caption{Ionenoptiken in der Schleuse eingbaut...}
-      \label{fig:simion_2}
-    \end{subfigure}
-    \begin{subfigure}[h]{1\textwidth}
-        \includegraphics[width=\textwidth]{./fig/simion_3.png}
-        \caption{Konstruktion der Ionenoptiken in der Schleuse..., erzeugt mit freecad, cite freecad sofern möglich.}
-        \label{fig:simion_3}
-    \end{subfigure}\hfill
-    \begin{subfigure}[t]{1\textwidth}
-        \includegraphics[width=\textwidth]{./fig/simion_4.png}
-        \caption{Ionenoptiken in der Schleuse eingbaut...}
-        \label{fig:simion_4}
-    \end{subfigure}
-    \caption{Fokussierung des Ionenstrahl ausgehend von konvergentem und divergentem strahl.} 
-    \label{fig:simion_param}
+  \centering
+  \begin{subfigure}[h]{0.5\textwidth}
+    \includegraphics[width=\textwidth]{./fig/simion_start.pdf}
+    \caption{Form des Ionenstrahls zu Beginn der Simulation.}
+    \label{fig:strahlform}
+  \end{subfigure}\hfill
+  \begin{subfigure}[h]{0.475\textwidth}
+    \includegraphics[width=\textwidth]{./fig/simion_particle.png}
+    \caption{Parameter der Partikel, in blau die kovergenten und in grün die divergenten Startbedingungen.}
+    \label{fig:strahlparameter}
+  \end{subfigure}
+  \caption{Simulierter Ionenstrahl und die dazugehörigen Parameter.}
+  \label{fig:simion_start}
 \end{figure}
+
+Hier \ref{simion_konv} und \ref{simion_div} beschreiben.
+Vorallem die Captions etwas ausführlicher.
+
+% \begin{figure}
+%   \centering
+%   \includegraphics[width=\textwidth]{./fig/simion_start.pdf}
+%   \caption{Cluststrahl beginn form.}
+%   \label{fig:simion_start}
+% \end{figure}
+
+% \begin{figure}
+%     \begin{subfigure}[h]{1\textwidth}
+%       \includegraphics[width=\textwidth]{./fig/simion_1.png}
+%       \caption{Konvergenter Ionenstrahl, M-tube $\SI{1}{\volt}$, Depotube $\SI{1}{\volt}$, Blende $\SI{1}{\volt}$ und Faraday Cup $\SI{1}{\volt}$.}
+%       \label{fig:simion_1}
+%     \end{subfigure}\hfill
+%     \begin{subfigure}[t]{1\textwidth}
+%       \includegraphics[width=\textwidth]{./fig/simion_2.png}
+%       \caption{spannungen einfügen.}
+%       \label{fig:simion_2}
+%     \end{subfigure}
+%     \begin{subfigure}[h]{1\textwidth}
+%         \includegraphics[width=\textwidth]{./fig/simion_3.png}
+%         \caption{spannungen einfügen.}
+%         \label{fig:simion_3}
+%     \end{subfigure}\hfill
+%     \begin{subfigure}[t]{1\textwidth}
+%         \includegraphics[width=\textwidth]{./fig/simion_4.png}
+%         \caption{spannungen einfügen.}
+%         \label{fig:simion_4}
+%     \end{subfigure}
+%     \caption{Fokussierung des Ionenstrahl ausgehend von konvergentem und divergentem strahl.}
+%     \label{fig:simion_param}
+% \end{figure}
+
+
+\begin{figure}
+  \begin{subfigure}[h]{0.50\textwidth}
+    \includegraphics[width=\textwidth]{./fig/simion_0.png}
+    \caption{Keine Depositionsoptiken.}
+    \label{fig:0}
+  \end{subfigure}\hfill
+  \begin{subfigure}[h]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{./fig/simion_konv0.pdf}
+    % \caption{capt}
+    \label{fig:konv1}
+  \end{subfigure}\hfill
+  \begin{subfigure}[h]{0.50\textwidth}
+    \includegraphics[width=\textwidth]{./fig/simion_1.png}
+    \caption{Depotube und Blende $\SI{500}{\volt}$.}
+    \label{fig:konv2}
+  \end{subfigure}\hfill
+  \begin{subfigure}[h]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{./fig/simion_konv1.pdf}
+    % \caption{capt}
+    \label{fig:konv3}
+  \end{subfigure}\hfill
+  \begin{subfigure}[h]{0.50\textwidth}
+    \includegraphics[width=\textwidth]{./fig/simion_2.png}
+    \caption{Depotube $\SI{500}{\volt}$ und Blende $\SI{50}{\volt}$.}
+    \label{fig:konv4}
+  \end{subfigure}\hfill
+  \begin{subfigure}[h]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{./fig/simion_konv2.pdf}
+    % \caption{capt}
+    \label{fig:konv5}
+  \end{subfigure}\hfill
+  \begin{subfigure}[h]{0.50\textwidth}
+    \includegraphics[width=\textwidth]{./fig/simion_3.png}
+    \caption{M-tube $\SI{250}{\volt}$, Depotube $\SI{500}{\volt}$ und Blende $\SI{50}{\volt}$.}
+    \label{fig:konv6}
+  \end{subfigure}\hfill
+  \begin{subfigure}[h]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{./fig/simion_konv3.pdf}
+    % \caption{capt}
+    \label{fig:konv7}
+  \end{subfigure}
+  \caption{Capt.}
+  \label{fig:simion_konv}
+\end{figure}
+
+
+% \begin{figure}
+%   \begin{subfigure}[h]{1\textwidth}
+%     \includegraphics[width=\textwidth]{./fig/5.png}
+%     \caption{Capt.}
+%     \label{fig:1}
+%   \end{subfigure}\hfill
+%   \begin{subfigure}[t]{1\textwidth}
+%     \includegraphics[width=\textwidth]{./fig/6.png}
+%     \caption{Capt einfügen.}
+%     \label{fig:2}
+%   \end{subfigure}
+%   \begin{subfigure}[h]{1\textwidth}
+%       \includegraphics[width=\textwidth]{./fig/7.png}
+%       \caption{Capt einfügen.}
+%       \label{fig:3}
+%   \end{subfigure}\hfill
+%   \begin{subfigure}[t]{1\textwidth}
+%       \includegraphics[width=\textwidth]{./fig/8.png}
+%       \caption{Capt einfügen.}
+%       \label{fig:4}
+%   \end{subfigure}
+%   \caption{Capt.}
+%   \label{fig:5}
+% \end{figure}
+
+
+
+\begin{figure}
+  \begin{subfigure}[h]{0.50\textwidth}
+    \includegraphics[width=\textwidth]{./fig/simion_4.png}
+    \caption{Keine Depositionsoptiken}
+    \label{fig:div1}
+  \end{subfigure}\hfill
+  \begin{subfigure}[h]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{./fig/simion_div0.pdf}
+    % \caption{capt}
+    \label{fig:div2}
+  \end{subfigure}\hfill
+  \begin{subfigure}[h]{0.50\textwidth}
+    \includegraphics[width=\textwidth]{./fig/simion_5.png}
+    \caption{Depotube und Blende $\SI{500}{\volt}$.}
+    \label{fig:div3}
+  \end{subfigure}\hfill
+  \begin{subfigure}[h]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{./fig/simion_div1.pdf}
+    % \caption{capt}
+    \label{fig:div4}
+  \end{subfigure}\hfill
+  \begin{subfigure}[h]{0.50\textwidth}
+    \includegraphics[width=\textwidth]{./fig/simion_6.png}
+    \caption{Depotube $\SI{500}{\volt}$ und Blende $\SI{50}{\volt}$.}
+    \label{fig:div5}
+  \end{subfigure}\hfill
+  \begin{subfigure}[h]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{./fig/simion_div2.pdf}
+    % \caption{capt}
+    \label{fig:div6}
+  \end{subfigure}\hfill
+  \begin{subfigure}[h]{0.50\textwidth}
+    \includegraphics[width=\textwidth]{./fig/simion_7.png}
+    \caption{Depotube $\SI{1020}{\volt}$ und Blende $\SI{50}{\volt}$.}
+    \label{fig:div7}
+  \end{subfigure}\hfill
+  \begin{subfigure}[h]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{./fig/simion_div3.pdf}
+    % \caption{capt}
+    \label{fig:div8}
+  \end{subfigure}
+  \caption{Capt.}
+  \label{fig:simion_div}
+\end{figure}
+
 
 \section{Strahlfokus}
-Mit dem stabilen und starken Signal von Fe$_1$ wurde der Fokus des Ionenstrahls in der Schleuse untersucht.
-Für große Cluster war dies wegen des schlechten Signal-Rausch-Verhältnisses nicht möglich.
+% Strom 4 pA für Fe1 siehe FC messung in Abh von x
+% stabilen und starken
+Mit dem  Signal von Fe$_1$ wurde der Fokus des Ionenstrahls in der Schleuse untersucht.
+Für große Cluster war dies wegen des niedrigen Signal-Rausch-Verhältnisses nicht möglich.
 Der Faraday cup wurde entlang einer Achse senkrecht zum Strahl verschoben und der Ionenstrom gemessen, siehe Abb. \ref{fig:faltung}.
 Der gemessene Strom ergibt sich aus der Faltung des Faraday cups und der echten Strahlform.
-Daher wurde für den Faraday Cup mit einer Öffnung von etwa $\SI{2.5}{\mm}$ und den Ionenstrahl eine Faltung durchgeführt und diese manuell an die Messdaten angepasst.
-Bei der für den Clusterstrahl angenommenen Gauß-Verteilung ergibt sich für die Halbwertsbreite etwa $\SI{1.5}{\mm}$. 
-Bei Betrieb der CSA mit dem Oberflächenanalyse System und den dazugehörigen Depositionsoptiken ist der Durchmesser des Depositionsspot in etwa $\SI{1}{\mm}$ \cite[S. 40]{gronhagen}.
+Daher wurde für den Faraday cup mit einer Öffnung von etwa $\SI{2.5}{\mm}$ und den Ionenstrahl eine Faltung durchgeführt und diese manuell an die Messdaten angepasst.
+Bei der für den Clusterstrahl angenommenen Gauß-Verteilung ergibt sich für die Halbwertsbreite etwa $\SI{1.5}{\mm}$.
+Der Betrieb der CSA mit dem Oberflächenanalyse System und den dazugehörigen Depositionsoptiken ist der Durchmesser des Depositionsspot in etwa $\SI{1}{\mm}$ \cite[S. 40]{gronhagen}.
 % Verglichen damit kann mit dem simplen Aufbau der Ionenoptiken in der Schleuse ein angemessener Fokus erzielt werden.
 
 \begin{figure}
     \centering
-    \includegraphics[scale=0.9]{./fig/faltung2.pdf}
+    \includegraphics[width=\textwidth]{./fig/faltung2.pdf}
     \caption{Abbildung überarbeiten und genau beschreiben oben mitte unten jewiels gneau.}
     \label{fig:faltung}
 \end{figure}
 
 
-\section{Massenspektren bzw Strom}
+\section{Massenselektierte Eisen Cluster}
+Die Clusterquelle erzeugt ein breites Spektrum an Clustern.
+Durch die Wahl der Quellenparameter wird die Aggregation beeinflusst und es werden bevorzugt kleine, mittlere oder große Cluster gebildet.
+Nach dem durchlaufen des Massenselektors kann der Ionenstrahl im Channeltron oder mit dem Faraday cup vermessen werden.
 
-Nur FC oder auch Chtr? \ref{fig:cluster_chtr}
-Massenspektren kleine und große Cluster
-Strom kann auch 2 pA sein, siehe Quelltext, name des Spektrums %2018-11-21_04_mass1000-250000_wait500_step1000_tw15_FC2_Quelle0cm_Iris9,08_13Watt
-Strom 4 pA für Fe1 siehe FC messung in Abh von x
-hier Spektren bzw Strom in Chtr bzw FC2 zeigen. Optiken funktionieren, anschauen von Fokus von Fe1 im FC2.
-Für Strahlfokus die entsprechenden Abbildungen zeigen.
-\ref{fig:cluster_chtr}
+\subsection{Kleine/Mittlere Eisen Cluster}
+Der Fokus der Arbeit liegt auf der Erzeugung von großen Clustern, welche auf ITO deponiert werden sollen um dann optische Messungen mit ihnen durchzuführen.
+Im Folgenden werden jedoch kurz die Massenspektren von kleinen bis mittleren Eisenclustern vorgestellt.
+In Abbildung \ref{fig:cluster_chtr} sind Massenspektren für Eisencluster mit einer Größe von $Fe_{1}$ bis $Fe_{26}$ zu sehen.
+Wegen der endlichen Massenauflösung ergibt sich kein diskretes Spektrum mit Deltapeaks.
+Es besteht jedoch die Möglichkeit das Signal mit mehreren Gaußfunktionen oder einem Cosinus-Fit zu nähern und so die Massenauflösung zu bestimmen \cite[S. 94 ff.]{krause}.
+Diese errgibt sich über folgenden Zusammenhang
+\begin{align}
+  \frac{m}{\Delta m} = \frac{1}{n} \sum\limits_{i} \frac{x_{c,i}}{2 \sigma_i},
+\end{align}
+wobei $\sigma$ die Standardabweichung und $x_c$ die Position der Maxima ist.
+Mit den Peakpositionen der aufgezeigten Spektren ist es möglich die Masse von Eisen zu berechnen und somit die auf große Eisencluster zu extrapolieren.
+Hierfür wird ein linearer Fit mit
+\begin{align}
+  N\left(m\right) = \frac{1}{m_{Fe}} \cdot \left(m-m_{\text{offset}}\right)
+\end{align}
+durchgeführt, wobei $N\left(m\right)$ die Anzahl der Atome pro Cluster bei gegebener Masse ist, die Steigung gleich der inversen Masse von Eisen in atomaren Einheiten entspricht und $m_{\text{offset}}$ den Versatz der Masse in den Spektren berücksichtigt.
+Die Ergebnisse für zwei Messungen mit dem Channeltron und eine mit dem Faraday cup, siehe Abb. \ref{fig:cluster_fc}, sind in Tabelle \ref{tab:msfitdata} zusammengefasst.
+% ggf extrapolieren dazu
+% auf große cluster extrapolieren möglich, an den tagen keine spektren von kleineren clustern aufgenommen weil optimieren lange dauert, daher m lit genommen
+% ggf Litwert angeben zb Nist
+
+\begin{table}
+  \centering
+  \caption{Abgebildet sind die berechneten Massenauflösungen der drei aufgeführten Messungen sowie die aus den linearen Fits erhaltene Masse für Eisen und der Versatz in den Spektren.}
+  \label{tab:msfitdata}
+  \begin{tabular}{llll}
+      \toprule
+      Abbildung	&	$m/\,\Delta m $	&	$m_\text{Fe}\,/\,\text{u}$	&	$m_\text{offset}\,/\,\text{u}$	\\
+      \midrule
+      \ref{fig:cluster_small}	&	56,17	&	57,03	&	7,61	\\
+      \ref{fig:cluster_medium}	&	47,25	&	55,78	&	24,26	\\
+      \ref{fig:cluster_fc}	&	43,36	&	57,27	&	11,32	\\
+      %  Lit &		&	55,847	&		\\
+
+      \bottomrule
+  \end{tabular}
+\end{table}
+
+% \begin{figure}
+%   \begin{subfigure}[t]{0.475\textwidth}
+%     \includegraphics[width=\textwidth]{./fig/cluster_small.pdf}
+%     % \caption{}
+%     \label{fig:cluster_small}
+%   \end{subfigure}\hfill
+%   \begin{subfigure}[t]{0.475\textwidth}
+%     \includegraphics[width=\textwidth]{./fig/cluster_medium.pdf}
+%     % \caption{Caption..}
+%     \label{fig:cluster_medium}
+%   \end{subfigure}
+%   \caption{Massenspektren gemessen mit dem Channeltron, links $Fe_{1}$ bis $Fe_{10}$ und rechts $Fe_{12}$ bis $Fe_{28}$.}
+%   \label{fig:cluster_chtr}
+% \end{figure}
 
 \begin{figure}
-    \begin{subfigure}[t]{0.475\textwidth}
-      \includegraphics[width=\textwidth]{./fig/cluster_small.pdf}
-      % \caption{}
-      \label{fig:cluster_small}
-    \end{subfigure}\hfill
-    \begin{subfigure}[t]{0.475\textwidth}
-      \includegraphics[width=\textwidth]{./fig/cluster_medium.pdf}
-      % \caption{Caption..}
-      \label{fig:cluster_medium}
-    \end{subfigure}
-    \caption{Massenspektren gemessen mit dem Channeltron, links $Fe_{1}$ bis $Fe_{10}$ und rechts $Fe_{12}$ bis $Fe_{28}$.} 
-    \label{fig:cluster_chtr}
+  \begin{subfigure}[h]{1\textwidth}
+    \includegraphics[width=\textwidth]{./fig/KleineCluster.pdf}
+    \caption{Massenspektrum von 50 bis 600 u gemessen mit dem Channeltron.}
+    \label{fig:cluster_small}
+  \end{subfigure}\hfill
+  \begin{subfigure}[t]{1\textwidth}
+    \includegraphics[width=\textwidth]{./fig/MittlereCluster.pdf}
+    \caption{Massenspektrum von 400 bis 1500 u gemessen mit dem Channeltron.}
+    \label{fig:cluster_medium}
+  \end{subfigure}
+  \caption{Abgebildet sind die Massenspektren gemessen mit dem Channeltron. An die Daten wurden Gaußfunktionen genähert und mit den Peakpositionen wurde ein lineare Regression durchgeführt.}
+  \label{fig:cluster_chtr}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{./fig/KleineClusterFC.pdf}
+  \caption{Spektrum von kleinen Eisenclustern gemessen mit dem Faraday cup in der Schleuse. An die Messdaten wurden Gaußfunktionen genähert und mit den Peakpositionen eine lineare Regression durchgeführt.}
+  \label{fig:cluster_fc}
 \end{figure}
 
 % \begin{figure}
@@ -115,41 +397,75 @@ Für Strahlfokus die entsprechenden Abbildungen zeigen.
 %       \caption{Clusterstrom gemessen mit dem Channeltron bei HV $= \SI{1000}{\volt}$. \SI{1500}{\volt}.}
 %       \label{fig:cluster_medium}
 %   \end{subfigure}
-%   \caption{Clusterstrom gemessen mit dem Channeltron im Massenselektor. Quelle optimiert für kleinere Cluster mit bis zu 10 \ref{fig:cluster_small} bzw. 28 Atomen \ref{fig:cluster_medium}.} 
+%   \caption{Clusterstrom gemessen mit dem Channeltron im Massenselektor. Quelle optimiert für kleinere Cluster mit bis zu 10 \ref{fig:cluster_small} bzw. 28 Atomen \ref{fig:cluster_medium}.}
 %   \label{fig:cluster_chtr}
 % \end{figure}
 
+\subsection{Große Eisen Cluster}
+Durch die Justage der Quellenparameter und nachfolgenden Ionenoptiken konnten kleine bis mittlere Cluster sowohl mit dem Channeltron als auch mit dem Faraday cup in der Schleuse nachgewiesen werden.
+Für die Erzeugung von großen Clustern ist eine Nachjustage nötig.
+Ein gängiges Verfahren ist, es sich auf immer höhere Massen zu setzen und das Signal Schritt für Schritt zu optimieren.
+Da der Strom in der Schleuse jedoch zu gering war, wurde die Optimierung anhand des Signals im Channeltron durchgeführt.
+Bei der Quelle wird der Aggregationsbereichs vergrößert, die Helium Zufuhr verringert und
+die Irisöffnung verkleinert.
+Durch weitere Justage der Ionenoptiken konnte die Erzeugung großer Cluster realisiert werden, siehe Abb. \ref{fig:chtr_just}.
+Nach dem Umschalten auf den Faraday cup muss insbesondere eine Justage der Elektrode erfolge, welche vorher zum Ablenken in das Channeltron diente.
+In Abb. \ref{fig:fc_just} ist der Strom für große Cluster direkt nach dem Umschalten abgebildet, wobei starke periodische Schwankungen zu sehen sind, auf welche in \ref{sec:effekte} näher eingeangen wird.
+Ebenfalls zu sehen ist der optimierte Clusterstrom bei ausgeschalteter Kryo Stufe, weil dadurch der Störeffekt nicht auftritt.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{./fig/chtr_just.pdf}
+  \caption{Abgebildet sind beispielhafte Spektren des Ionenstroms, gemessen mit dem Channeltron, während der Optimierung der Quellenparamater und Ionenoptiken.}
+  \label{fig:chtr_just}
+\end{figure}
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{./fig/fc_just.pdf}
+  \caption{Ionenstrom in der Schleuse nach der Optimierung mit dem Channeltron. In rot das Signal direkt nach dem Umschalten bei eingeschalteter Kryostufe. Die grüne Kurve ist das optimierte Signal bei ausgeschalteter Kryostufe.}
+  \label{fig:fc_just}
+\end{figure}
+
+
+
 
 \section{Störeffekte}
+\label{sec:effekte}
+kapitel noch unvollständig\\
 Für die Probenherstellung beziehungsweise die Untersuchung von Clustern ist ein hoher stabiler Clusterstrom essentiell.
-Eine Abschätzung für die Depositionszeit gab es in \ref{sec:depo} und ein Strom bis zu $\SI{2}{\pA}$ konnte in der Schleuse für Fe$_{1790}$ realisiert werden.
-Bei dem Betrieb der CSA gibt es allerdings unerwünschte Störeffekte wie Intensitätseinbrüche \cite[S. 45]{gust}.
+Eine Abschätzung für die Depositionszeit gab es in \ref{sec:depo} und ein Strom bis zu $\SI{2}{\pA}$ konnte in der Schleuse für große Cluster realisiert werden, siehe Abb. \ref{fig:fc_just}.
+% Bei dem Betrieb der CSA gibt es allerdings unerwünschte Störeffekte wie Intensitätseinbrüche \cite[S. 45]{gust}.
 Im Rahmen dieser Arbeit wurden unerwünschte Effekte bei der Messung des Stroms und bei dem Betrieb der Clusterquelle beobachtet.\\
+
+Einer der Störeffekte sind die periodischen Schwnakungen des Stroms, welche bei der Justage von großen Clustern in der Schleuse problematisch waren.
+schwankungen sehr starperiodizität 2.4s
+period schwanken Kryo
+
+permanent Kryo aus geht nicht weil eigtl aufgabe reduzierung des restgas nicht passeirt und außerdem anfangsphase starke desorption - bild zeigen.
 
 Zum einen ....
 Wandern der Verteilung, bei hoch und runter drehen der quellenlesitung, hoch runter nicht gleich weil träges verhalten und nur wenige min spektrum gefahren und dann Leistung varieert. schneller varieert als verschieben eintritt
-
+12 W üblich, leistung nicht zu hoch drehen weil sonst quelle zu heiß wird und gefahr, dass magnetron kopf entmagnetisiert wird
 parasitärer Peak bei etwa 25k u erwähnen \cite{gust}
 
 \begin{figure}
   \centering
-  \includegraphics[scale=1]{./fig/leistung.pdf}
+  \includegraphics[width=\textwidth]{./fig/leistung.pdf}
   \caption{Massenspektren bei verschiedenen Leistungen der Clusterquelle, gemessen mit dem Channeltron. Die übliche Quellenleistung ist $\SI{12}{\watt}$. Zwischen den Spektren sind jeweils etwa $\SI{3}{\min}$ vergangen.}
   \label{fig:leistung}
 \end{figure}
 ausschalten von kryo gas desorption \ref{fig:firstdepo}
-% übliche werte irawan von ag ? siehe \cite - Eisen eine größenordnung strom weniger (Heinz), waurm? 
+% übliche werte irawan von ag ? siehe \cite - Eisen eine größenordnung strom weniger (Heinz), waurm?
 
 
-kurze zeitskala kryo periodisches schwanken stört optimieren
+kurze zeitskala kryo periodisches schwanken stört optimieren siehe \ref{fig:fc_just}
 kryo aus option aber Untergrund steigt bzw generell mögliche verunreinigungen
 Lnagzeit stabilität, mehrere stunden depodauer, strom sollte auf die se skala stabil sein
 problem thermischer natur siehe strom in abh von leistung
 und Abnahme des stroms oxidieren / nach justieren erforderlich
 Stabilität des Stroms
-Schwanken des Stroms (Kryo), vor und nach Depo bzw zwischendurch kontrollieren - 
+Schwanken des Stroms (Kryo), vor und nach Depo bzw zwischendurch kontrollieren -
 Strom sinkt bzw schiebt zu anderen Massen (thermisch bzw Optiken-Iris, Skimmer beschichtet)
 
-Mehr Strom/Depodauer nötig (Diskussion), gestaltet sich aber schwierig das umzusetzen.. 
+Mehr Strom/Depodauer nötig (Diskussion), gestaltet sich aber schwierig das umzusetzen..
 oxidieren justage strom haut ab blabla
-
