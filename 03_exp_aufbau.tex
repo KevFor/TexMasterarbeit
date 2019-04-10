@@ -41,10 +41,13 @@ Weitere Informationen zu den einzelnen Komponenten finden sich in \cite{krause}.
 \end{figure}
 
 \subsection{Massenselektor}
-In dem Massenselektor, entwickelt von \cite{Issendorff.1999}, wird der Ionenstrahl durch Anlegen von zeitlich begrenzten Hochspannungspulsen senkrecht zur Strahlrichtung abgelenkt und dadurch eine Aufspaltung des Strahls bewirkt.
-Durch den Puls erhalten alle Cluster die gleiche Energie, kleinere Cluster haben weger ihrer geringeren Masse eine höhere Geschwindigkeit.
-
-Gewünschte Clustergröße einstellen 
+In dem Massenselektor, entwickelt von \cite{Issendorff.1999}, wird der Ionenstrahl durch Nutztung des Time-of-Flight Prinzips aufgespalten, siehe Abb. \ref{fig:mschtr}.
+Durch eien zeitlich begrenzten Beschleunigungspuls wird ein Ionenpaket senkrecht zur Strahlrichtung abgelenkt und alle Cluster erhalten die gleiche Energie, wobei kleinere Cluster weger ihrer geringeren Masse eine höhere Geschwindigkeit haben.
+Nachdem das Ionenpaket den Driftraum passiert wird ein Abbremspuls angelegt und die Cluster sind aufgrund der unterschiedlichen Geschwindigkeiten der Masse nach separiert.
+Große Cluster befinden sich weiter oben und kleinere weiter unten, dadurch werden mit einem kleinen Austrittsloch nur Cluster der eingestellten Masse durchgelassen.
+Im Massenselektor kann der Ionenstrom aller Cluster mit der Messelektrode gemessen werden, sofern keine Pulse angelegt werden.
+Mithilfe von zwei Ablenkelektroden wird der massenselektrierte Ionenstrahl in ein Channeltron geleitet um dort ein verstärkten Strom zu messen.
+Ohne das Anlegen der Ablenkspannungen an den Elektroden werden die Cluster weiter in den nächsten Abschnitt geleitet.
 
 \begin{figure}
     \centering
@@ -53,22 +56,39 @@ Gewünschte Clustergröße einstellen
     \label{fig:mschtr}
 \end{figure}
 
-
 \section{Schleusen Kammer}
 \label{sec:schleuse}
+Hinter dem Massenselektor befindet sich ein Übergang bestehend aus einer verschiebbaren Ionenoptik, der \textit{movable tube} kurz M-Tube, welche in einem Wellbulk befestigt ist, siehe Abb. \ref{fig:depotube}.
+Darauf folgt ein Plattenventil und bisher die Präparationskammer mit den dazugehörigen Depositionsoptiken.
+In dieser Arbeit wird stattdesssen die Schleusenkammer angebracht, siehe Abb. \ref{fig:schleuse}.
+Mit dieser soll die Erzeugung und schnelle Entnahme von Proben für \textit{ex situ} optische Messungen realisiert werden.
+In dieser war zunächst lediglich ein Faraday cup montiert und die Lineardurchführungen sind noch ungenutzt.
+Für die Inbetriebnahme werden neue Depositionsoptiken benötigt welche in Kapitel \ref{sec:inbetriebnahme} beschrieben werden.
 
-kurz beschreiben und auf nächste Kapitel hinweisen - Simulaton bzw Konstruktion
-Foto beschriften, ggfg besseres Foto?
-% Mit dieser soll die Erzeugung und schnelle Entnahme von Proben, für optische Messungen, realisiert werden.
-% CSA ruhig kurz halten und auf Dominik und Yin verweisen, ggf andere die irgendwas speziell gemacht haben
 \begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{./fig/schleuse.jpg}
-    \caption{caption.}
+    \includegraphics[width=\textwidth]{./fig/schleuse_5.png}
+    \caption{Schleusenkammer abgekoppelt vom restilichen Aufbau, über Plattenventil und Wellbulk verbunden mit dem Massenselektor, vgl Abb. \ref{fig:depotube}. Im inneren befindet sich ein Faraday cup sowie zwei Lineardruchführungen.}
     \label{fig:schleuse}
 \end{figure}
 
 
-\section{UV/vis und AFM Aufbau erklären}
-UV/vis und ggf AFM hier erklären? wohin, afm überhaupt?
-Foto von UV/vis Aufbau und ggf hier Messablauf erklären
+\section{UV/vis Spektroskopie Aufbau}
+Für die UV/vis Spektroskopie wird ein Aufbau genutzt, wie er in Abb. \ref{fig:uv_visaufbau} zu sehen ist.
+Das Licht einer Halogen-Deuterium Lampe, im Wellenlängenbereich von etwa $(200-1200)\,$nm, wird über ein optisches Kabel und eine Kollimator Linse auf die Probe fokussiert.
+Mit einer weitren Linsen wird das Licht über eine Glasfaser an ein Spektrometer geleitet.
+Durch eine Blende mit $\SI{1}{\milli\meter}$, $\SI{0,6}{\milli\meter}$ und $\SI{0,3}{\milli\meter}$ wird die örtliche Auflösung gewährleistet und die Probe ist auf einem in drei Dimensionen verfahrbaren Präzisionshalter montiert.\\
+Vor Beginn einer Messreihe wird ein Dunkelspektrum bei ausgeschalteter Lichtquelle aufgenommen und vom gemessenen Signal abgezogen. 
+Mit dem Signal $I_{Ref}$ einer Referenzstelle und dem Signal $I$ einer beliebigen Probenstelle ergibt sich die Absorption 
+\begin{align}
+    % T=\left(\frac{I-I_{dark}}{I_{Ref}-I_{dark}}\right)\\
+    A=- \lg\left(T\right) = -\lg\left(\frac{I-I_{dark}}{I_{Ref}-I_{dark}}\right),
+\end{align}
+wobei T die Transmission und $I_{Dark}$ das Signal bei ausgeschalteter Lampe ist.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{./fig/uv_visaufbau_6.png}
+    \caption{Die Komponenten des Messaufbaus für die UV/vis Spektroskopie sind montiert auf einer optischen Bank, ebenfalls abgebildet sind die dazugehörige Halogen-Deuterium Lampe und das Spektrometer.}
+    \label{fig:uv_visaufbau}
+\end{figure}
