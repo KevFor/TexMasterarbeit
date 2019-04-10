@@ -1,5 +1,5 @@
 \chapter{Experimenteller Aufbau}
-Für die Untersuchung und Erzeugung von Clustern gibt es einen Aufbau der sich in zwei Komponenten unterteilen lässt, vgl. Abb \ref{fig:aufbau}.
+Für die Untersuchung und Erzeugung von Clustern gibt es einen Aufbau der sich in zwei Komponenten unterteilen lässt, vgl. Abb \ref{fig:csaaufbau}.
 Im Rahmen dieser Arbeit waren das Präparations-/Analysesystem und die Clusterstrahlanlage (kurz CSA) voneinander getrennt, mehr Informationen zum bisherigen Aufbau finden sich beispielsweise in \cite{wolter}.
 Hinter der CSA wird anstelle des Analysesystems die Schleusen Kammer in Betrieb genommen.
 % Mit dieser soll die Erzeugung und schnelle Entnahme von Proben, für optische Messungen, realisiert werden.
@@ -13,24 +13,47 @@ Hinter der CSA wird anstelle des Analysesystems die Schleusen Kammer in Betrieb 
 \end{figure}
 
 \section{Clusterstrahlanlage}
-Die Clusterstrahlanlage kann in drei Abschnitte unterteilt werden, die Clusterquelle, die Kryo Kammer und den Massenselektor, vgl. Abb \ref{fig:aufbau}.
-In diesen werden die Cluster erzeugt, der Clusterstrahl fokussiert und die gewünschte Clustergröße eingestellt. Die genauere Funktionsweise der einzelnen Elemente wird im folgenden beschrieben.
+Die Clusterstrahlanlage kann in drei Abschnitte unterteilt werden, die Clusterquelle, die Kryo Kammer und den Massenselektor, vgl. Abb \ref{fig:csaaufbau}.
+In diesen werden die Cluster erzeugt, der Clusterstrahl fokussiert und die gewünschte Clustergröße eingestellt.
+Die genauere Funktionsweise der einzelnen Elemente wird im folgenden beschrieben, mehr Information finden sich z.B. in den Arbeiten von \cite{duffe, wolter, schröder}.
 \subsection{Clusterquelle}
-Prinzip der Erzeugung ist das.
-\subsection{Kryo Kammer}
-auf Diplomarbeit krause verweisen, gut erklärt
-Fokussierung und Restgas weg.
-Duffe und dowo
-\subsection{Massenselektor}
-Gewünschte Clustergröße einstellen 
-Massenselektor \cite{Issendorff.1999}
-Bild von Chtr zeigen, ablenkung des Strahls
+Für die Erzeugung der Cluster wird eine Magnetron-Sputter-Gas-Aggregations-Quelle benutzt, bei der aus einem Target Atome gesputtert werden, welche dann in einer Edelgasatmosphäre zu Clustern kondensieren, vgl Abb. \ref{fig:quelle}.
+Das Target ist auf einem Magnetron Kopf montiert, durch einlassen eines Argon-Helium Gemisches und Anlegen einer Spannung von etwa $\SI{1}{\kV}$ wird ein Plasma gezündet.
+Dadurch werden die Atome gesputtert und können dann in dem Aggregationsvolumen zu Clustern kondensieren, bis zu $80\,\%$ liegen als Ionen vor \cite{Haberland.1991}.
+Dabei wird ein breites Spektrum an Clustern erzeugt und die Verteilung kann durch verschiedene Parameter varieert werden.
+Diese sind die Menge und Zusammensetzung des Gas-Gemisches, die Leistung mit der gesputtert wird, das Aggregationsvolumen sowie die Potentiale der Ionenoptiken in der Quelle.
 \begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{./fig/massenselektor_2.png}
+    \includegraphics[width=\textwidth]{./fig/quelle.png}
+    \caption{Schematischer Aufbau der Clusterquelle, \cite{woltermaster}.}
+    \label{fig:quelle}
+\end{figure}
+\subsection{Kryo Kammer}
+Nach der Quelle gelangen die Cluster in die Kryokammer, hier wird der diffuse Strahlanteil mit einem Skimmer abgeschnitten und mit Ionenoptiken der Strahl fokussiert und auf $\SI{500}{\eV}$ beschleunigt, siehe Abb. \ref{fig:kryokammer}.
+Der darauf folgende X/Y-Deflektor ermöglicht eine Verkippung des Strahls senkrecht zur Strahlrichtung.
+Für die Bereinigung des Ionenstrahls vom Restgas wird mit einer Kryopumpe eine Temperatur von etwa $\SI{10}{\kelvin}$ \cite[S. 27]{woltermaster} an der ersten Kryostufe erzeugt, dadurch kann das austretende Argon ausgefroren werden.
+Weitere Informationen zu den einzelnen Komponenten finden sich in \cite{krause}.
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{./fig/kryokammer.png}
+    \caption{Schematischer Aufbau der Kryokammer, \cite{woltermaster}.}
+    \label{fig:kryokammer}
+\end{figure}
+
+\subsection{Massenselektor}
+In dem Massenselektor, entwickelt von \cite{Issendorff.1999}, wird der Ionenstrahl durch Anlegen von zeitlich begrenzten Hochspannungspulsen senkrecht zur Strahlrichtung abgelenkt und dadurch eine Aufspaltung des Strahls bewirkt.
+Durch den Puls erhalten alle Cluster die gleiche Energie, kleinere Cluster haben weger ihrer geringeren Masse eine höhere Geschwindigkeit.
+
+Gewünschte Clustergröße einstellen 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{./fig/massenselektor_3.png}
     \caption{Hier Bild MS, insbersondere Chtr und elektrode zum umschalten.}
     \label{fig:mschtr}
 \end{figure}
+
+
 \section{Schleusen Kammer}
 \label{sec:schleuse}
 
