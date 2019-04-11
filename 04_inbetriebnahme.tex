@@ -2,7 +2,7 @@
 \label{sec:inbetriebnahme}
 In diesem Kapitel wird zunächst die Konstruktion und Simulation der neuen Ionenoptiken in der Schleuse beschrieben.
 Anhand des stabilen Signals von Fe$_1$ wurde der Fokus des Clusterstrahls in der Schleusenkammer untersucht.
-Danach sind die Massenspektren für kleine und große Cluster aufgeführt und es werden einige Störeffekte aufgeführt die beim Betrieb der CSA auftreten.
+Danach sind die Massenspektren für kleine und große Cluster aufgeführt und es werden einige Störeffekte angerissen die beim Betrieb der CSA auftreten.
 \section{Konstruktion}
 Für die Schleusenkammer wurden zwei Baugruppen konstruiert, die Depotube welche als Führung des Clusterstrahls dient und die Depositonselemente bestehend aus Probenhalter und Blende. Die Modelle wurden mit FreeCAD\cite{freecad} erstellt und die finalen Versionen wurden von den Mitarbetern des Konstruktionsbüros der Fakultät Physik der TU Dortmund erstellt \cite{konstruktion} und in der mechanischen Werkstatt gefertigt, die Zeichnungsnummern von Depotube und Halterung+Blende sind >e1.1536.04.18< und >e1a.1548.06.18<.\\
 
@@ -48,15 +48,15 @@ Allerdings ist es dann nicht mehr möglich den gesamten Probenhalter so weit zur
 \begin{figure}
     \begin{subfigure}[t]{0.478\textwidth}
       \includegraphics[width=\textwidth]{./fig/schleuse_freecad.png}
-      \caption{Modell der Depositionsoptiken in der Schleuse.}
+      \caption{}
       \label{fig:schleuse_freecad}
     \end{subfigure}\hfill
     \begin{subfigure}[t]{0.475\textwidth}
       \includegraphics[width=\textwidth]{./fig/schleuse_real.png}
-      \caption{Ionenoptiken in der Schleusenkammer eingbaut.}
+      \caption{}
       \label{fig:schleuse_real}
     \end{subfigure}
-    \caption{Innenraum der Schleuse, Modell und eingebaute Optiken.}
+    \caption{Innenraum der Schleuse, (a) Modell und (b) Foto der eingebauten Ionenoptiken. Durch isolierte Kabel welche nach außen geführt sind können Spannungen an die einzelnen Elemente gelget werden.}
     \label{fig:schleuse_innen}
 \end{figure}
 
@@ -136,8 +136,8 @@ Simuliert wurden die Ionentrajektorien von jeweils 5000 Ionen, wobei ein konverg
 
 
 Außerdem wurden die Positionen der Auftreffpunkte der Ionen für die jeweiligen Parameter in Heatmaps aufgetragen, um eine Aussage über den Fokus treffen zu können, hierbei ist es wichtig auf die Abmessungen zu achten.
-Die Ergebnisse finden sich in Abb. \ref{fig:simion_konv} und Abb. \ref{fig:simion_div}.
-Der Faraday Cup lag dabei immer auf einem Potential von $\SI{-50}{\volt}$, da dies in der Spannung entspricht welche im Betrieb angelegt wird.\\
+Beispielhafte Ergebnisse für die Strahlführung finden sich in Abb. \ref{fig:simion_konv} und Abb. \ref{fig:simion_div}.
+Der Faraday Cup lag dabei immer auf einem Potential von $\SI{-50}{\volt}$, da dies der Spannung entspricht welche im Betrieb angelegt wird.\\
 
 Bei beiden Strahlformen ist zu erkennen, dass bei Abwesenheit der Depositionsoptiken ein Großteil der Ionen den Faraday cup nicht erreicht und stattdessen vorher mit der Kammerwand beziehungsweise der M-tube kollidiert, vgl Abb. \ref{fig:konv0} und \ref{fig:div0}.
 Im nächsten Schritt werden sowohl Depotube als auch Blende eingbaut und an beide eine Spannung von $\SI{-500}{\volt}$ angelegt, dies entspricht der sogenannten \textit{floating voltage}, welche dann genutzt wird wenn der Clusterstrahl nicht beeinflusst werden soll.
@@ -479,7 +479,7 @@ Unabhängig von der Einstellung des Massenselektors kommt es zu einer Erhöhung 
 \subsection{Quellenstabilität}
 \label{sec:leistung}
 Für die Depositon ist ein stabiler Ionenstrom essentiell, insbesondere dann, wenn die Depositionsdauer mehere Stunden beträgt.
-Allerdings hängt die Stabilität des Ionenstroms beziehungsweise der Clusterquelle von vielen Faktoren ab, wie z.B. Quellenleistung, Zusammensetzung des Gaszufuhr und Druck in der Quelle, Sputterleistung, Temperatur, Aggregationsvolumen und Potentiale der Ionenoptiken in der Quelle.
+Allerdings hängt die Stabilität des Ionenstroms beziehungsweise der Clusterquelle von vielen Faktoren ab, wie z.B. Quellenleistung, Zusammensetzung und Stärke der Gaszufuhr sowie der Druck in der Quelle, Sputterleistung, Temperatur, Aggregationsvolumen und Potentiale der Ionenoptiken in der Quelle.
 Im folgenden soll die Abhängigkeit der Verteilung bei steigender und abfallender Quellenleistung beobachtet werden.
 Dafür wurde der Ionenstrom im Channeltron gemessen und lediglich die Leistung variiert, siehe Abb. \ref{fig:leistung}.
 Bei dem lokalen Maxima bei kleineren Massen handelt es sich um einen \textit{parasitären Peak}, näheres siehe \cite{gust}.

@@ -1,7 +1,7 @@
 \chapter{Experimenteller Aufbau}
-Für die Untersuchung und Erzeugung von Clustern gibt es einen Aufbau der sich in zwei Komponenten unterteilen lässt, vgl. Abb \ref{fig:csaaufbau}.
+Für die Untersuchung und Erzeugung von Clustern gibt es einen Aufbau welcher sich in zwei Komponenten unterteilen lässt, vgl. Abb \ref{fig:csaaufbau}.
 Im Rahmen dieser Arbeit waren das Präparations-/Analysesystem und die Clusterstrahlanlage (kurz CSA) voneinander getrennt, mehr Informationen zum bisherigen Aufbau finden sich beispielsweise in \cite{wolter}.
-Hinter der CSA wird anstelle des Analysesystems die Schleusen Kammer in Betrieb genommen.
+An den letzten Abschnitt der CSA wird anstelle der Präparationskammer die Schleusen Kammer platziertz und in Betrieb genommen.
 % Mit dieser soll die Erzeugung und schnelle Entnahme von Proben, für optische Messungen, realisiert werden.
 % CSA ruhig kurz halten und auf Dominik und Yin verweisen, ggf andere die irgendwas speziell gemacht haben
 \begin{figure}
@@ -15,21 +15,75 @@ Hinter der CSA wird anstelle des Analysesystems die Schleusen Kammer in Betrieb 
 \section{Clusterstrahlanlage}
 Die Clusterstrahlanlage kann in drei Abschnitte unterteilt werden, die Clusterquelle, die Kryo Kammer und den Massenselektor, vgl. Abb \ref{fig:csaaufbau}.
 In diesen werden die Cluster erzeugt, der Clusterstrahl fokussiert und die gewünschte Clustergröße eingestellt.
-Die genauere Funktionsweise der einzelnen Elemente wird im folgenden beschrieben, mehr Information finden sich z.B. in den Arbeiten von \cite{duffe, wolter, schröder}.
+Die genauere Funktionsweise der einzelnen Elemente wird im folgenden beschrieben, mehr Information finden sich z.B. in den Arbeiten von \cite{duffe, schröder, wolter}.
 \subsection{Clusterquelle}
-Für die Erzeugung der Cluster wird eine Magnetron-Sputter-Gas-Aggregations-Quelle benutzt, bei der aus einem Target Atome gesputtert werden, welche dann in einer Edelgasatmosphäre zu Clustern kondensieren, vgl Abb. \ref{fig:quelle}.
-Das Target ist auf einem Magnetron Kopf montiert, durch einlassen eines Argon-Helium Gemisches und Anlegen einer Spannung von etwa $\SI{1}{\kV}$ wird ein Plasma gezündet.
-Dadurch werden die Atome gesputtert und können dann in dem Aggregationsvolumen zu Clustern kondensieren, bis zu $80\,\%$ liegen als Ionen vor \cite{Haberland.1991}.
-Dabei wird ein breites Spektrum an Clustern erzeugt und die Verteilung kann durch verschiedene Parameter varieert werden.
-Diese sind die Menge und Zusammensetzung des Gas-Gemisches, die Leistung mit der gesputtert wird, das Aggregationsvolumen sowie die Potentiale der Ionenoptiken in der Quelle.
+Für die Erzeugung der Cluster wird eine Magnetron-Sputter-Gas-Aggregations-Quelle benutzt, bei der aus einem Target Atome gesputtert werden, welche dann in einer Edelgasatmosphäre zu Clustern kondensieren, siehe Abb. \ref{fig:quelle}.
+Das Target ist auf einem Magnetron Kopf montiert vgl. Abb \ref{fig:magnet}, durch Einlassen eines Argon-Helium Gemisches und Anlegen einer Spannung von etwa $\SI{1}{\kV}$ wird ein Plasma gezündet, vgl. Abb. \ref{fig:plasma}
+Verwendet wird ein $\SI{1}{\mm}$ dünnes Eisen Target welches eine Einkerbung besitzt um den Sputterprozess zu begünstigen, siehe Abb. \ref{fig:target1}, \ref{fig:target2}.
+Ohne Einkerbung und bei einem dickeren Target würde das Magnetfeld zu stark abgeschwächt werden.
+Die gesputterten Atome können in dem Aggregationsbereich, Raum zwischen Target und Iris, zu Clustern kondensieren, wobei bis zu $80\,\%$ der entstandenen Cluster ioniesiert werden, \cite{Haberland.1991}.
+Es ensteht ein breites Spektrum an Clustern dessen Verteilung kann durch verschiedene Parameter varieert werden.
+Diese sind die Menge und Zusammensetzung des Gas-Gemisches, die Leistung mit der gesputtert wird, Größe des Aggregationsbereichs und der variablen Irisöffnung, sowie die Potentiale der Ionenoptiken in der Quelle.\\
+
+Mit einem Phywe Teslameter (Auflösung $\SI{0,01}{\milli\tesla}$) und einer tangentialen Hallsonde, aus der Vorlesungsvorbereitung der Fakultät Physik, wurde das Magnetfeld vermessen.
+% (Serial No: 190400147191) (Serial No: 130400145524)
+Gemessen wurde die senkrechte B-Feldkomponente am Rand und in der Mitte des Targets sowie die parallele B-Feldkomponente über der Einkerbung, siehe Abb. \ref{fig:quelle}. 
+
+\begin{table}
+    \centering
+    \caption{Magnetfeld der Quelle mit und ohne Target, gemessen wurde die senkrechte Komponente am Rand und in der Mitte sowie die parallele Komponente über der Einkerbung.}
+    \label{tab:bfeld}
+    \begin{tabular}{l|lllll}
+        \toprule
+        ohne Target	&	Mitte	&	oben	&	unten	&  links & rechts\\
+        B$_{\bot}$ / mT   & 450 &-140 & -115& -130& -130 \\
+        B$_{\parallel}$ / mT   & 0 &130 & 130& 130& 130 \\    
+        \midrule
+        mit Target	&	Mitte	&	oben	&	unten	&  links & rechts\\
+        B$_{\bot}$ / mT   & 44 &-11 & -23& -18& -20 \\
+        B$_{\parallel}$ / mT   & 0 &36 & 34& 34& 32 \\      
+       \bottomrule
+    \end{tabular}
+  \end{table}
+  
+
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{./fig/quelle.png}
     \caption{Schematischer Aufbau der Clusterquelle, \cite{woltermaster}.}
     \label{fig:quelle}
 \end{figure}
+
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[h]{0.34\textwidth}
+        \includegraphics[width=\textwidth]{./fig/YinMagnet1.png}
+        \caption{}
+        \label{fig:magnet}
+    \end{subfigure}\hfill
+    \begin{subfigure}[h]{0.34\textwidth}
+        \includegraphics[width=\textwidth]{./fig/YinMagnet2.png}
+        \caption{}
+        \label{fig:plasma}
+    \end{subfigure}\hfill
+    \begin{subfigure}[h]{0.31\textwidth}
+        \includegraphics[width=\textwidth]{./fig/Fetarget.png}
+        \caption{}
+        \label{fig:target1}
+    \end{subfigure}\hfill
+    \begin{subfigure}[h]{1\textwidth}
+        \includegraphics[width=\textwidth]{./fig/Fetarget2.png}
+        \caption{}
+        \label{fig:target2}
+    \end{subfigure}
+    \caption{Oben: Links Magnetkonfiguration, mitte Plasmaentladung \cite{Yin.2007} und rechts eingbautes Eisen Target. Unten: Eisen Target ohne und mit Einkerbung, altes benutztes Target.}
+    \label{fig:target}
+\end{figure}
+
+
 \subsection{Kryo Kammer}
-Nach der Quelle gelangen die Cluster in die Kryokammer, hier wird der diffuse Strahlanteil mit einem Skimmer abgeschnitten und mit Ionenoptiken der Strahl fokussiert und auf $\SI{500}{\eV}$ beschleunigt, siehe Abb. \ref{fig:kryokammer}.
+Nach der Quelle gelangen die Cluster in die Kryokammer, hier wird der diffuse Strahlanteil mit einem Skimmer abgeschnitten und mit Ionenoptiken der Strahl fokussiert sowie auf $\SI{500}{\eV}$ beschleunigt, siehe Abb. \ref{fig:kryokammer}.
 Der darauf folgende X/Y-Deflektor ermöglicht eine Verkippung des Strahls senkrecht zur Strahlrichtung.
 Für die Bereinigung des Ionenstrahls vom Restgas wird mit einer Kryopumpe eine Temperatur von etwa $\SI{10}{\kelvin}$ \cite[S. 27]{woltermaster} an der ersten Kryostufe erzeugt, dadurch kann das austretende Argon ausgefroren werden.
 Weitere Informationen zu den einzelnen Komponenten finden sich in \cite{krause}.
@@ -41,8 +95,8 @@ Weitere Informationen zu den einzelnen Komponenten finden sich in \cite{krause}.
 \end{figure}
 
 \subsection{Massenselektor}
-In dem Massenselektor, entwickelt von \cite{Issendorff.1999}, wird der Ionenstrahl durch Nutztung des Time-of-Flight Prinzips aufgespalten, siehe Abb. \ref{fig:mschtr}.
-Durch eien zeitlich begrenzten Beschleunigungspuls wird ein Ionenpaket senkrecht zur Strahlrichtung abgelenkt und alle Cluster erhalten die gleiche Energie, wobei kleinere Cluster weger ihrer geringeren Masse eine höhere Geschwindigkeit haben.
+In dem Massenselektor, entwickelt von R. Palmer und B. von Issendorff\cite{Issendorff.1999}, wird der Ionenstrahl durch Nutztung des Time-of-Flight Prinzips aufgespalten, siehe Abb. \ref{fig:mschtr}.
+Durch eien zeitlich begrenzten Beschleunigungspuls wird ein Ionenpaket senkrecht zur Strahlrichtung abgelenkt und alle Cluster erhalten die gleiche Energie, wobei kleinere Cluster wegen ihrer geringeren Masse eine höhere Geschwindigkeit haben.
 Nachdem das Ionenpaket den Driftraum passiert wird ein Abbremspuls angelegt und die Cluster sind aufgrund der unterschiedlichen Geschwindigkeiten der Masse nach separiert.
 Große Cluster befinden sich weiter oben und kleinere weiter unten, dadurch werden mit einem kleinen Austrittsloch nur Cluster der eingestellten Masse durchgelassen.
 Im Massenselektor kann der Ionenstrom aller Cluster mit der Messelektrode gemessen werden, sofern keine Pulse angelegt werden.
@@ -75,8 +129,8 @@ Für die Inbetriebnahme werden neue Depositionsoptiken benötigt welche in Kapit
 
 \section{UV/vis Spektroskopie Aufbau}
 Für die UV/vis Spektroskopie wird ein Aufbau genutzt, wie er in Abb. \ref{fig:uv_visaufbau} zu sehen ist.
-Das Licht einer Halogen-Deuterium Lampe, im Wellenlängenbereich von etwa $(200-1200)\,$nm, wird über ein optisches Kabel und eine Kollimator Linse auf die Probe fokussiert.
-Mit einer weitren Linsen wird das Licht über eine Glasfaser an ein Spektrometer geleitet.
+Das Licht einer Halogen-Deuterium Lampe, im Wellenlängenbereich von etwa $(200-1200)\,$nm, wird mit einer Kollimator Linse auf die Probe fokussiert.
+In einer weiteren Linse wird das Licht auf einem Glasfaserkabel eingefangen und an ein Spektrometer geleitet.
 Durch eine Blende mit $\SI{1}{\milli\meter}$, $\SI{0,6}{\milli\meter}$ und $\SI{0,3}{\milli\meter}$ wird die örtliche Auflösung gewährleistet und die Probe ist auf einem in drei Dimensionen verfahrbaren Präzisionshalter montiert.\\
 Vor Beginn einer Messreihe wird ein Dunkelspektrum bei ausgeschalteter Lichtquelle aufgenommen und vom gemessenen Signal abgezogen. 
 Mit dem Signal $I_{Ref}$ einer Referenzstelle und dem Signal $I$ einer beliebigen Probenstelle ergibt sich die Absorption 
