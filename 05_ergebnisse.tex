@@ -23,16 +23,16 @@ Für den noch sichtbaren geringen Ionenstrom befand sich das Maximum der Verteil
 Wegen dieser Tatsachen ist keine zuverlässige Abschätzung der Belegung möglich.\\
 \begin{figure}[h]
   \begin{subfigure}[h]{\textwidth}
-    \includegraphics[width=\textwidth]{./fig/firstdepo.pdf}
-    \caption{Erstes Depositionsexperiment von Eisen Clustern, abgebildet sind die Spektren vor und nach der Deposition.}
+    \includegraphics[width=0.8\textwidth]{./fig/firstdepo.pdf}
+    \caption{}
     \label{fig:firstdepo}
   \end{subfigure}\hfill
   \begin{subfigure}[t]{\textwidth}
-    \includegraphics[width=\textwidth]{./fig/seconddepo.pdf}
-    \caption{Abgebildet sind die Spektren des zweiten Depositionsexperiments. Es handelt sich hier um den ersten von zwei Tagen.}
+    \includegraphics[width=0.8\textwidth]{./fig/seconddepo.pdf}
+    \caption{}
     \label{fig:seconddepo}
   \end{subfigure}
-  \caption{Ionenstrom von großen Clustern gemessen in der Schleuse bei ausgeschalter Kryopumpe.} 
+  \caption{Ionenstrom von großen Clustern gemessen in der Schleuse bei ausgeschalter Kryopumpe. (a) Erstes Depositionsexperiment, abgebildet sind die Spektren vor und nach der Deposition, in der Zwischenzeit wurden keine Spektren gemessen. (b) Bei dem zweiten Depositionsexperiment wurde der Strom in regelmäßigen Abständen gemessen und gegebenfalls nachjustiert. Abgebildet ist die erste von zwei Depositionsetappen, weil nach einer gewissen Zeit keine Optimierung möglich war wurde an einem anderen Tag erneut deponiert.} 
   \label{fig:deposition}
 \end{figure}
 
@@ -73,11 +73,12 @@ berechnet. Es ergibt sich für die Belgung ein Wert von $\SI{200}{\pA\min}$, wel
 % \end{figure}
 
 \section{UV/vis Spektroskopie}
+\label{sec:uvvis_ergebnisse}
 Die UV/vis Spektroskopie wird im Rahmen dieser Arbeit genutzt um die Charakteristik des Depositionsflecks zu untersuchen.
 Die Cluster konnten im Rahmen der optischen Messungen bisher nicht nachgewiesen werden.
 Im folgenden soll eine Abschätzung für das zu erwartende Signal gegeben werden.
 Danach werden die optische Stabilität der Messung und die Homogenität des Probensystems untersucht.
-Dies geschieht anhand einer Messreihe, siehe Abb. \ref{fig:uvvis_ablauf}.
+Dies geschieht anhand einer Messreihe unter Verwendung einer $\SI{1}{\mm}$ Blende, siehe Abb. \ref{fig:uvvis_ablauf}.
 % Da es nicht möglich war den Depositionsfleck zu finden wurde die Probe, unter Verwendung einer $\SI{1}{\mm}$ Blende abgerastert, siehe Abb. \ref{fig:uvvis_ablauf}.
 % \begin{figure}
 %     \centering
@@ -90,16 +91,15 @@ Dies geschieht anhand einer Messreihe, siehe Abb. \ref{fig:uvvis_ablauf}.
 \begin{figure}
     \begin{subfigure}[b]{0.65\textwidth}
       \includegraphics[width=\textwidth]{./fig/uvvis_raster.pdf}
-      \caption{Die Probe wurde abgerastert und nach jeder Zeile die Referenzstelle erneut angefahren. 
-      Die gesamte Messdauer betrug ca. $\SI{90}{\min}$ und die Farbtöne zeigen auf, zu welchem Zeitpunkt die Referenzspektren aufgenommen wurden, siehe Abb. \ref{sec:scoutsim}.}
+      \caption{}
       \label{fig:uvvis_raster}
     \end{subfigure}\hfill
     \begin{subfigure}[b]{0.325\textwidth}
       \includegraphics[width=\textwidth]{./fig/uvvis_probe.png}
-      \caption{ITO Glasträger der zweiten Deposition, befestigt auf einem weiteren Glasträger welcher in dem UV/vis Aufbau eingespannt wird. In grün eingezeichnet ist der Bereich in dem die Probe abgerastert wurde.}
+      \caption{}
       \label{fig:uvvis_probe}
     \end{subfigure}
-    \caption{Abgebildet ist der Messablauf beim Rastern und die Probe.} 
+    \caption{(a) Die Probe wurde abgerastert und nach jeder Zeile die Referenzstelle erneut angefahren. Das Signal des Referenzpunktes ist in Abb. \ref{fig:uvvis_ref} dargestellt. Der Farbton den eine Zeile aufweist, z.B erste Zeile dunkelrot, entpsricht dem dunkelroten Spektrum in Abb. \ref{fig:uvvis_ref}. Das Signal des Referenzpunktes, nachdem die zweite Zeile (helles rot) durchlaufen wurde entspricht dem hellroten Signal in Abb. \ref{fig:uvvis_ref}, und so weiter. Die gesamte Messdauer betrug ca. $\SI{90}{\min}$. (b) ITO Glasträger der zweiten Deposition, befestigt auf einem weiteren Glasträger welcher in dem UV/vis Aufbau eingespannt wird. In grün eingezeichnet ist der Bereich in dem die Probe abgerastert wurde.} 
     \label{fig:uvvis_ablauf}
 \end{figure}
 % Die Integrationszeit eines einzelnen Scans war $\SI{8}{\ms}$ und für eine Spektrum wurde über 500 Scans gemittelt.
@@ -110,17 +110,18 @@ Im Falle der UV/vis Spektroskopie ist die Wellenlänge des Lichts viel größer 
 Die von Maxwell Garnett aufgestellte Formel für das effektive Medium beschreibt kugelförmige Partikel mit großem Abstand zueinander und ist somit einge gute Näherung für eine niedrige Clusterbelegung. 
 Für eine Abschätzung des zu erwartenden Absorptionsignals wurde ein $\SI{3}{\nm}$ dicker Film als effektives Medium in Vakuum mit Maxwell Garnett für verschiedene Füllfaktoren berechnet.
 Ein Füllfaktor von $0,075$ entspricht dabei $0,15$ Clustermonolagen.
-Die Berechnungen wurden von Alex Kononov zur Verfügung gestellt und sind in Abb. \ref{fig:scout} zu sehen.\\
+Die Berechnungen wurden von Alexander Kononov zur Verfügung gestellt und sind in Abb. \ref{fig:scout} zu sehen.\\
 Die erwartete Absorption für eine Belegung von $0,15$ Clustermonolagen, wie sie für das zweite Depositionsexperiment abgeschätzt wurde, siehe Tabelle \ref{tab:depo2}, beläuft sich auf $0,3 - 0,6\,\%$.
 Für kleine Wellenlängen ist dabei der größte Effekt zu erwarten und bei $\SI{400}{\nm}$ ergibt sich aus den Berechnungen noch eine Absorption von $0,4\,\%$. Die Empfindlichkeit der optischen Messungen sollte daher etwa $0,1\,\%$ sein.
 \begin{figure}[h]
   \centering
   \includegraphics[width=\textwidth]{./fig/scout.pdf}
-  \caption{Abgebildet ist das berechnete Absorptionsignal eines $\SI{3}{\nm}$ dicken Eisen Films in Vakuum, als effektives Medium mit Maxwell Garnett für verschiedene Füllfaktoren. Ein Füllfaktor von $0,075$ entspricht dabei $0,15$ Clustermonolagen. Rechnungen bereitgestellt von Alex Kononov.}
+  \caption{Abgebildet ist das berechnete Absorptionsignal eines $\SI{3}{\nm}$ dicken Eisen Films in Vakuum, als effektives Medium mit Maxwell Garnett für verschiedene Füllfaktoren. Ein Füllfaktor von $0,075$ entspricht dabei $0,15$ Clustermonolagen. Rechnungen bereitgestellt von Alexander Kononov.}
   \label{fig:scout}
 \end{figure}
 
 \subsection{Optische Stabilität}
+\label{sec:uvvis_stabilitaet}
 Wie in Kapitel \ref{sec:scoutsim} beschrieben, wird eine Absorption von weniger als einem Prozent erwartet.
 Ein systematischer Störeffekt während der Messung ist die Veränderung der Intensität der Lampe.
 % Dies führt dazu, dass auf der gleichen Probenstelle eine veränderte Absorption gemessen wird.

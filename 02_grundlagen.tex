@@ -1,60 +1,102 @@
 \chapter{Theoretische Grundlagen}
-In diesem Kapitel....
-cluster - \cite{haberland}
-uv vis \cite{kreibig}
+In diesem Kapitel werden kurz einige Grundlagen zu Clustern und dem verwendeten Substrat angerissen und ein Verweis auf die entsprechende Literatur gemacht. Darauf folgt eine Abschätzung für die Depositionszeit.
+\section{Cluster}
+Eine Einführung in die Theorie und Experimente der Clusterphysik ist gegeben durch \textit{Clusters of Atoms and Molecules} von Hellmut Haberland \cite{haberland}.
+Cluster können aufgrund von geometrisch oder elektrisch günstigen Zuständen verschiedene Strukturen aufweisen.
+Bei Clustern wie Eisen, Kobalt oder Nickel spielen magnetische Effekte ebenfalls eine Rolle und Berechnenungen sagen voraus, dass bestimmte Clustergrößen für kleine Eisencluster eine erhöhte Stabilität aufweisen \cite{Kim.2014}.\\
 
-Was soll hier rein? ITO transmission bzw mit fe? scout sachen?
+Für die Betrachtung der optischen Eigenschaften von Clustern sei auf \textit{Optical Properties of Metal Clusters} \cite{kreibig} von Uwe Kreibig und Michael Vollmer sowie auf \textit{Optical Properties of Nanoparticle Systems} \cite{Quinten.2011} von Michael Quinten verwiesen.
 
-\section{Cluster erlären}
-Haberland
-\section{ITO hier?}
-Warum Ito, wie sieht ITO aus
-was gibts für tolle Sachen  bei ITO
-Fe in auf Ito bzw Ito modifiziert
-ITO erfüllt Anforderungsprofil für Depo/Untersuchung
-Hopg, MoS2 (atomar glatt, inert - AFM, einfach präparierbar - abziehen)
-Glasträger mit ITO beshcichtet Sigma aldrich, technische Daten wie schichtdicke
-\section{Depozeit}
+\section{Indiumzinnoxid}
+Bei Indiumzinnoxid (engl. inidum tin oxide, kurz ITO) handelt es sich um einen Halbleiter welcher im optischen Bereich eine hohe Transparenz aufweist.  
+Mit ITO beschichtete Glasträger der Firma Sigma-Aldrich \cite{sigmaaldrich} werden als Substrat verwendet.
+Die Schichtdicke beträgt $1200-1600\SI{}{\angstrom}$ und die Zusammensetzung von ITO ist $90\,\% \,\text{In}_2\texttt{O}_3$ $10\,\% \,\text{Sn}\texttt{O}_2$.
+Die Durchführung von optischen Messungen in Transmission und das Abführen der elektrischen Ladung bei Depositionsexperimenten von Ionen ist aufgrund der optischen Transparenz und elektrischen Leitfähigkeit von ITO möglich.
+% Eine industrielle Verwendung von ITO ist die in organischen Leuchtdioden, Informationen zu den elektrischen- optischen- und Struktureigenschaften finden sich in \cite{Kim.1999}.
+
+% \section{Grundlage von Ionenoptiken}
+% Bei Ionenoptiken werden die elektrostatischen und/oder magnetischen Kräfte auf geladene Partikel für die Beeinflussung des Ionenstrahls genutzt, im folgenden sollen einige grundlegende Prinzipien zusammengefasst werden.\\
+
+% Die Beschleunigung die ein Körper erfährt ist durch die wirkende Kraft über das zweite Newton'sche Gesetz gegeben
+% \begin{align}
+%     F= m\cdot a.
+% \end{align}
+% Für punktförmige geladene Teilchen werden die wirkenden Kräfte durch das Coulomb'sche Gesetz beschrieben
+% \begin{align}
+%   F_e= \frac{Q_i}{4 \pi \epsilon_0 } \sum_{n} \frac{Q_n}{r^2_n},
+% \end{align}
+% wobei $Q_i$ die Ladung des Partikels und $\epsilon_0$ die Dielektrizitätskonstante des Vakuums ist.
+% Ein Elektrisches Feld ist die Kraft pro Ladung
+% \begin{align}
+%   E=\frac{F_e}{Q_i}
+% \end{align}
+% und damit ergibt sich für die Kraft auf ein einfach geladenes Teilchen
+% \begin{align}
+%   F_E=-e E,
+% \end{align}
+% wobei $e$ die Ladung ist.
+% Zusammengefasst lässt sich für die Beschleunigung, die ein geladenes Partikel in einem elektrischen Feld erfährt
+% \begin{align}
+%   a= \frac{F_E}{m}=\frac{-E}{m/e},
+% \end{align}
+% schreiben.
+
+\section{Depositionszeit}
 \label{sec:depo}
-sagen dass sich clusterstrom bei einfach geladenen teilchen in x ionen übersetzen lässt
-dann das bei Strahlgröße xmm sich ein Depofleck ergibt der so viele cluster benötig werden um eine ML zu bilden
-damit sagen dass x pAmin 1 ML sind
-das entspricht x min bei y pA oder 10x min bei 0.1 y pA
+Im Folgenden soll eine Abschätzung für die Depositionszeit gegeben werden.
+Aufgrund der einfachen Ladung der Cluster lässt sich der Strom übersetzen in die Anzahl an Ionen die jede Sekunde auf das Substrat treffen
+\begin{align}
+  2\,\text{pA} \quad \widehat{=} \quad \frac{2\cdot10^{-12}\,\dfrac{C}{s}}{1,6\cdot10^{-19}\,C} = 1,25\cdot10^7 \,\dfrac{\text{Ionen}}{s}.
+\end{align}
+Ausgehend von großen Eisenclustern mit einem Druchmesser von etwa $\SI{3,5}{\nano\meter}$ und einem Depofleck mit etwa $\SI{1,5}{\milli\meter}$ Durchmesser ergibt sich die Anzahl benötigter Cluster je Monolage, unter Berücksichtigung einer hexagonalen Kugelpackung mit einer Packungsdichte $P_{hex}$, zu
+\begin{align}
+  \frac{A_{\text{Depofleck}}}{A_{\text{Cluster}}}\cdot P_{hex} =\frac{\pi\cdot(\frac{1,5}{2}\cdot10^{-3}\,\text{m})^2}{\pi\cdot(\frac{3,5}{2}\cdot10^{-9}\,\text{m})^2}\cdot 0,9\approx 4,6\cdot10^{11} \,\text{Ionen}.
+\end{align}
+Damit ergibt sich die Depositionszeit aus dem Ionenstrom und den Clustern pro Monolage
+\begin{align}
+  t&=\frac{\text{Ionenstrom}}{\text{Cluster je Monolage}}=\frac{4,6\cdot10^{11} \,\text{Ionen}}{1,25\cdot10^7 \,\dfrac{\text{Ionen}}{s}}\approx 3,7 \cdot10^4\,\text{s} \approx 10\,\text{h}.
+\end{align}
+Eine praktische Angabe für die Belegung ist die Kombination aus Depositionszeit und Clusterstrom.
+Dadurch ergibt sich für eine Monolage eine benötigte Depositionsmenge von $\SI{1200}{\pA\min}$, dies entspricht $\SI{600}{\min}$ bei $\SI{2}{\pA}$ oder beispielsweise $\SI{300}{\min}$ bei $\SI{4}{\pA}$.\\
+
+Für Depositionsexperimente bei denen Cluster auf Substrate deponiert werden ist es wichtig die Koaleszenz zu berücksichtigen.
+Daher sollte für die Untersuchung von einzelnen Cluster eine Belegung weit unter einer Monolage angestrebt werden.
+Für optische Messungen ist dies ein Nachteil, da aber der Clusterstrahl und somit der Depositionsfleck keine homegene Verteilung besitzt existieren einzelne Cluster in den Randbereichen, auch wenn eine Monolage deponiert wird.
 
 
 % Deposition Heinz: 0.1 ev/atom sanft 1ev/atom okay 10/ev Atom nicht saft - Bindungsenergie
-Abschätzung wie viel kann deponiert werden vgl Ag / Cu Zahlen nennen
-Rechnung wie viel Belegung gewollt 1/10 ML
-The most severe restriciton for clusters on supports conecerns the taotal coverage which must remain well below one cluster monolayer in order to avoid coalescence processes.
-This might (although it need to) be a drawback in optical experiments.
-It can be overcome y evaporating on mylar foils and subsequently folding them together [3.76 (Referenz in Buch)].
-Kreibig \cite[S.216]{Kreibig.1995} S.216 - optical properties
+% Abschätzung wie viel kann deponiert werden vgl Ag / Cu Zahlen nennen
+% Rechnung wie viel Belegung gewollt 1/10 ML
+% The most severe restriciton for clusters on supports conecerns the taotal coverage which must remain well below one cluster monolayer in order to avoid coalescence processes.
+% This might (although it need to) be a drawback in optical experiments.
+% It can be overcome y evaporating on mylar foils and subsequently folding them together [3.76 (Referenz in Buch)].
+% Kreibig \cite[S.216]{Kreibig.1995} S.216 - optical properties
 
-Text gegebenfalls mit Formeln im Text \\
-Ar$^*$ + Fe$_n$ $\rightarrow $ Ar + Fe$^+_{n}$ + e$^-$ \\
-und hier nur Formeln in align Umgebung\\
-\begin{align}
-  N(l)=&\frac{10l^3 -15l^2 + 11l -3}{3} \\
-  \text{Clusterstrom}&\approx 2\,\text{pA} \quad \widehat{=} \quad \frac{2\cdot10^{-12}\,\dfrac{C}{s}}{1,6\cdot10^{-19}\,C} = 1,25\cdot10^7 \,\dfrac{\text{Ionen}}{s} \\
-  A_{\text{Depofleck}}&=\pi\cdot(\frac{1,5}{2}\cdot10^{-3}\,\text{m})^2 \\
-  A_{\text{Cluster}}&=\pi\cdot(\frac{3,5}{2}\cdot10^{-9}\,\text{m})^2 \\
-  \frac{A_{\text{Depofleck}}}{A_{\text{Cluster}}}&= \text{Cluster je Monolage}\approx 4,6\cdot10^{11} \,\text{Ionen}\\
-  t&=\frac{\text{Clusterstrom}}{\text{Cluster je Monolage}}\approx 4\cdot10^4\,\text{s} \approx 11\,\text{h} \\
-  n_{\text{Monolayer}}&=\frac{A_{\text{Spot}}}{A_{\text{Cluster}}}
-\end{align}
-\blindtext \\
-Für Poster \\
-$Fe_{100\text{k}\,\text{amu}} \quad\approx\quad Fe_{1790} $
-\begin{align*}
- \text{\#Cluster per Monolayer}\\
- N_{ML}=\frac{\text{Spotsize$\,\cdot\,$packing density}}{\text{Clustersize}} \approx  4,6\cdot10^{11}\,\frac{\text{Ions}}{\text{ML}} \\
- \text{Deposited $\approx 200\,$pAmin}\quad \widehat{=} \quad  7,5\cdot10^{10} \,\text{Ions} \\
- \frac{\text{Deposited}}{\text{\#Cluster per Monolayer}}\quad \rightarrow \quad 0.15\,\,\text{ML}
-\end{align*}
-\begin{align}
- \text{Cluster Current}&\approx 1\,\text{pA} \quad \widehat{=} \quad 6,24\cdot10^6 \,\dfrac{\text{Ions}}{s} \\
- \text{Deposition time}&\approx 200\,\text{min} 
-\end{align}
+% Text gegebenfalls mit Formeln im Text \\
+% Ar$^*$ + Fe$_n$ $\rightarrow $ Ar + Fe$^+_{n}$ + e$^-$ \\
+% und hier nur Formeln in align Umgebung\\
+% \begin{align}
+%   N(l)=&\frac{10l^3 -15l^2 + 11l -3}{3} \\
+%   \text{Clusterstrom}&\approx 2\,\text{pA} \quad \widehat{=} \quad \frac{2\cdot10^{-12}\,\dfrac{C}{s}}{1,6\cdot10^{-19}\,C} = 1,25\cdot10^7 \,\dfrac{\text{Ionen}}{s} \\
+%   A_{\text{Depofleck}}&=\pi\cdot(\frac{1,5}{2}\cdot10^{-3}\,\text{m})^2 \\
+%   A_{\text{Cluster}}&=\pi\cdot(\frac{3,5}{2}\cdot10^{-9}\,\text{m})^2 \\
+%   \frac{A_{\text{Depofleck}}}{A_{\text{Cluster}}}&= \text{Cluster je Monolage}\approx 4,6\cdot10^{11} \,\text{Ionen}\\
+%   t&=\frac{\text{Clusterstrom}}{\text{Cluster je Monolage}}\approx 4\cdot10^4\,\text{s} \approx 11\,\text{h} \\
+%   n_{\text{Monolayer}}&=\frac{A_{\text{Spot}}}{A_{\text{Cluster}}}
+% \end{align}
+% \blindtext \\
+% Für Poster \\
+% $Fe_{100\text{k}\,\text{amu}} \quad\approx\quad Fe_{1790} $
+% \begin{align*}
+%  \text{\#Cluster per Monolayer}\\
+%  N_{ML}=\frac{\text{Spotsize$\,\cdot\,$packing density}}{\text{Clustersize}} \approx  4,6\cdot10^{11}\,\frac{\text{Ions}}{\text{ML}} \\
+%  \text{Deposited $\approx 200\,$pAmin}\quad \widehat{=} \quad  7,5\cdot10^{10} \,\text{Ions} \\
+%  \frac{\text{Deposited}}{\text{\#Cluster per Monolayer}}\quad \rightarrow \quad 0.15\,\,\text{ML}
+% \end{align*}
+% \begin{align}
+%  \text{Cluster Current}&\approx 1\,\text{pA} \quad \widehat{=} \quad 6,24\cdot10^6 \,\dfrac{\text{Ions}}{s} \\
+%  \text{Deposition time}&\approx 200\,\text{min} 
+% \end{align}
 
 
 
