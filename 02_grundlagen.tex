@@ -2,13 +2,15 @@
 In diesem Kapitel werden kurz einige Grundlagen zu Clustern und dem verwendeten Substrat angerissen und ein Verweis auf die entsprechende Literatur gemacht. Darauf folgt eine Abschätzung für die Depositionszeit.
 \section{Cluster}
 Eine Einführung in die Theorie und Experimente der Clusterphysik ist gegeben durch \textit{Clusters of Atoms and Molecules} von Hellmut Haberland \cite{haberland}.
-Cluster können aufgrund von geometrisch oder elektrisch günstigen Zuständen verschiedene Strukturen aufweisen.
-Bei Clustern wie Eisen, Kobalt oder Nickel spielen magnetische Effekte ebenfalls eine Rolle und Berechnenungen sagen voraus, dass bestimmte Clustergrößen für kleine Eisencluster eine erhöhte Stabilität aufweisen \cite{Kim.2014}.\\
-
-Für die Betrachtung der optischen Eigenschaften von Clustern sei auf \textit{Optical Properties of Metal Clusters} \cite{kreibig} von Uwe Kreibig und Michael Vollmer sowie auf \textit{Optical Properties of Nanoparticle Systems} \cite{Quinten.2011} von Michael Quinten verwiesen.
+Mehr Informationen finden sich beispielsweise in \textit{Nanoclusters: A Bridge across Disciplines} \cite{Jena.2011} und \textit{Structure and properties of atomic nanoclusters} \cite{Alonso.2005}\\
+Näheres zu magnetischen Cluster auf Oberflächen findet sich in \textit{Magnetic properties of supported metal atoms and clusters} \cite{Martins.2016}, speziell zu Eisen Clustern 
+\textit{Exchange bias and magnetic behaviour of iron nanoclusters prepared by the gas aggregation technique} \cite{SanchezMarcos.2012} und
+\textit{Magnetization and M{\"o}ssbauer study of partially oxidized iron cluster films deposited on HOPG} \cite{TarrasWahlberg.2014}.\\
+Für die Betrachtung der optischen Eigenschaften von Clustern sei auf \textit{Optical Properties of Metal Clusters} von Uwe Kreibig und Michael Vollmer \cite{kreibig}, \textit{Optical Properties of Nanoparticle Systems} von Michael Quinten \cite{Quinten.2011} sowie auf \textit{Optical Properties of Metal Clusters} von Craig F. Bohren und Donald R. Huffman \cite{Bohren.1998} verwiesen.\\
+Informationen zu dem breitem Feld der Anwendungsmöglichkeiten von Clustern und Nanopartikeln finden sich beispielsweise in \textit{Nanomaterials and Nanochemistry} \cite{Brechignac.2007} und \textit{Commercial scale production of inorganic nanoparticles} \cite{Tsuzuki.2009}.
 
 \section{Indiumzinnoxid}
-Bei Indiumzinnoxid (engl. inidum tin oxide, kurz ITO) handelt es sich um einen Halbleiter welcher im optischen Bereich eine hohe Transparenz aufweist.  
+Bei Indiumzinnoxid (engl. inidum tin oxide, kurz ITO) handelt es sich um einen Halbleiter der im optischen Bereich eine hohe Transparenz aufweist.  
 Mit ITO beschichtete Glasträger der Firma Sigma-Aldrich \cite{sigmaaldrich} werden als Substrat verwendet.
 Die Schichtdicke beträgt $1200-1600\SI{}{\angstrom}$ und die Zusammensetzung von ITO ist $90\,\% \,\text{In}_2\texttt{O}_3$ $10\,\% \,\text{Sn}\texttt{O}_2$.
 Die Durchführung von optischen Messungen in Transmission und das Abführen der elektrischen Ladung bei Depositionsexperimenten von Ionen ist aufgrund der optischen Transparenz und elektrischen Leitfähigkeit von ITO möglich.
@@ -48,20 +50,20 @@ Aufgrund der einfachen Ladung der Cluster lässt sich der Strom übersetzen in d
 \begin{align}
   2\,\text{pA} \quad \widehat{=} \quad \frac{2\cdot10^{-12}\,\dfrac{C}{s}}{1,6\cdot10^{-19}\,C} = 1,25\cdot10^7 \,\dfrac{\text{Ionen}}{s}.
 \end{align}
-Ausgehend von großen Eisenclustern mit einem Druchmesser von etwa $\SI{3,5}{\nano\meter}$ und einem Depofleck mit etwa $\SI{1,5}{\milli\meter}$ Durchmesser ergibt sich die Anzahl benötigter Cluster je Monolage, unter Berücksichtigung einer hexagonalen Kugelpackung mit einer Packungsdichte $P_{hex}$, zu
+Ausgehend von großen Eisenclustern mit einem Durchmesser von etwa $\SI{3,5}{\nano\meter}$ und einem Depositionsfleck mit etwa $\SI{1,5}{\milli\meter}$ Durchmesser ergibt sich die Anzahl benötigter Cluster je Monolage auf dem Depositionsfleck zu
 \begin{align}
-  \frac{A_{\text{Depofleck}}}{A_{\text{Cluster}}}\cdot P_{hex} =\frac{\pi\cdot(\frac{1,5}{2}\cdot10^{-3}\,\text{m})^2}{\pi\cdot(\frac{3,5}{2}\cdot10^{-9}\,\text{m})^2}\cdot 0,9\approx 4,6\cdot10^{11} \,\text{Ionen}.
+  \frac{A_{\text{Depofleck}}}{A_{\text{Cluster}}}\cdot P_{\text{hex}} =\frac{\pi\cdot(\frac{1,5}{2}\cdot10^{-3}\,\text{m})^2}{\pi\cdot(\frac{3,5}{2}\cdot10^{-9}\,\text{m})^2}\cdot 0,907\approx 4,6\cdot10^{11} \,\text{Ionen}.
 \end{align}
+Hierbei ist $P_{\text{hex}}$ ($\frac{\pi}{2 \sqrt{3}} \approx 0,907$) die Packungsdichte harter Kugeln in hexagonaler Anordnung in einer Ebene.
 Damit ergibt sich die Depositionszeit aus dem Ionenstrom und den Clustern pro Monolage
 \begin{align}
-  t&=\frac{\text{Ionenstrom}}{\text{Cluster je Monolage}}=\frac{4,6\cdot10^{11} \,\text{Ionen}}{1,25\cdot10^7 \,\dfrac{\text{Ionen}}{s}}\approx 3,7 \cdot10^4\,\text{s} \approx 10\,\text{h}.
+  t&=\frac{\text{Cluster je Monolage}}{\text{Ionenstrom}}=\frac{4,6\cdot10^{11} \,\text{Ionen}}{1,25\cdot10^7 \,\dfrac{\text{Ionen}}{s}}\approx 3,7 \cdot10^4\,\text{s} \approx 10\,\text{h}.
 \end{align}
 Eine praktische Angabe für die Belegung ist die Kombination aus Depositionszeit und Clusterstrom.
 Dadurch ergibt sich für eine Monolage eine benötigte Depositionsmenge von $\SI{1200}{\pA\min}$, dies entspricht $\SI{600}{\min}$ bei $\SI{2}{\pA}$ oder beispielsweise $\SI{300}{\min}$ bei $\SI{4}{\pA}$.\\
 
-Für Depositionsexperimente bei denen Cluster auf Substrate deponiert werden ist es wichtig die Koaleszenz zu berücksichtigen.
-Daher sollte für die Untersuchung von einzelnen Cluster eine Belegung weit unter einer Monolage angestrebt werden.
-Für optische Messungen ist dies ein Nachteil, da aber der Clusterstrahl und somit der Depositionsfleck keine homegene Verteilung besitzt existieren einzelne Cluster in den Randbereichen, auch wenn eine Monolage deponiert wird.
+Für Depositionsexperimente bei denen Cluster auf Substrate deponiert werden ist es wichtig die Koaleszenz zu berücksichtigen, daher sollte für die Untersuchung von einzelnen Cluster eine Belegung weit unter einer Monolage angestrebt werden.
+Für optische Messungen ist daher eine höhere Belgung theoretisch ein Nachteil, da aber der Clusterstrahl und somit der Depositionsfleck keine homogene Verteilung besitzt existieren separierte Cluster in den Randbereichen, auch wenn eine Monolage im Zentrum deponiert wird.
 
 
 % Deposition Heinz: 0.1 ev/atom sanft 1ev/atom okay 10/ev Atom nicht saft - Bindungsenergie

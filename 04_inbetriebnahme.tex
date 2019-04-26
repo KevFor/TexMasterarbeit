@@ -4,15 +4,14 @@ In diesem Kapitel wird zunächst die Konstruktion und Simulation der neuen Ionen
 Anhand des stabilen Signals von Fe$_1$ wurde der Fokus des Clusterstrahls in der Schleusenkammer untersucht.
 Danach sind die Massenspektren für kleine und große Cluster aufgeführt und es werden einige Störeffekte angerissen die beim Betrieb der CSA auftreten.
 \section{Konstruktion}
-Für die Schleusenkammer wurden zwei Baugruppen konstruiert, die Depotube welche als Führung des Clusterstrahls dient und die Depositonselemente bestehend aus Probenhalter und Blende. Die Modelle wurden mit FreeCAD\cite{freecad} erstellt und die finalen Versionen wurden von den Mitarbetern des Konstruktionsbüros der Fakultät Physik der TU Dortmund erstellt \cite{konstruktion} und in der mechanischen Werkstatt gefertigt, die Zeichnungsnummern von Depotube und Halterung+Blende sind >e1.1536.04.18< und >e1a.1548.06.18<.\\
+Für die Schleusenkammer wurden zwei Baugruppen konstruiert, die Depotube welche als Führung des Clusterstrahls dient und die Depositonselemente bestehend aus Probenhalter und Blende. Die Modelle wurden mit FreeCAD\cite{freecad} erstellt und die finalen Versionen wurden von den Mitarbeitern des Konstruktionsbüros der Fakultät Physik der TU Dortmund erstellt \cite{konstruktion} und in der mechanischen Werkstatt gefertigt, die Zeichnungsnummern von Depotube und Halterung+Blende sind >e1.1536.04.18< und >e1a.1548.06.18<.\\
 
-% In dem Übergang zwischen dem Ausgang des Massenselektors und der Schleuse
-Für den Übergang zwischen der M-tube hinter dem Massenselektor und der der Schleusenkammer wird eine weitere Ionenoptik benötigt um den Clusterstrahl zu führen, dafür wurde die Depotube konstruiert, siehe Abb. \ref{fig:depotube}.
+Für den Übergang zwischen der M-tube hinter dem Massenselektor und der Schleusenkammer wird eine weitere Ionenoptik benötigt um den Clusterstrahl zu führen, dafür wurde die Depotube konstruiert, siehe Abb. \ref{fig:depotube}.
 An die Depotube wird im Betrieb eine Spannung von etwa $\SI{-500}{\volt}$ angelegt, welche von den anderen Bauteilen isoliert sein soll.
-Für die Befestigung in der Anlage werden zwei Teflonschalen, durch zusammenschieben der Keile, gegen die Wand gepresst.
+Für die Befestigung in der Anlage werden zwei Teflonschalen durch das Zusammenschieben der Keile gegen die Wand gepresst.
 Dafür wird eine Mutter aufgedreht und somit der Schieber und ein ringförmiger Keil bewegt.
 Der zweite Keil kann sich nicht bewegen, weil ein größeres Rohr mit Madenschrauben auf dem Grundrohr fixiert ist.
-Das größere Rohrstück welches übersteht, soll einen spaltfreien Übergang zwischen Depotube und der beweglichen M-tube ermöglichen.
+Das größere Rohrstück, welches übersteht, soll einen spaltfreien Übergang zwischen Depotube und der beweglichen M-tube ermöglichen.
 
 \begin{figure}
   \begin{subfigure}[h]{1\textwidth}
@@ -39,12 +38,12 @@ Beide Elemente bestehen aus gewinkelten Blechen mit Langlöchern und ermögliche
 Ebenso wie die Depotube können auch die Depositionoptiken auf ein Potential gelegt werden.
 
 % Für die Befestigung auf den Lineardurchführung wurden Keramik Buchsen verwendet
-Mit der Blende kann die Flugbahn der Ionen beieinflusst werden, hierbei wurde ein Kreisring aus Edelstahlfolie befestigt um so eine homegenere elektrische Feldverteilung zu erreichen.
+Mit der Blende kann die Flugbahn der Ionen beeinflusst werden, hierbei wurde ein Kreisring aus Edelstahlfolie befestigt, um so eine homogenere elektrische Feldverteilung zu erreichen.
 Durch das Verschieben über die Lineardurchführung kann der Ionenstrahl teilweise oder ganz abgeschirmt werden.
 
 In den Probenhalter können zwei Probenplatten eingeführt werden.
 Die vorhandene Lineardurchführung lässt sich genug verfahren.
-Allerdings ist es dann nicht mehr möglich den gesamten Probenhalter so weit zurück zu fahren, dass der Faraday cup auf die gleiche Stelle entlang der Strahlachse gesetzt werden kann.
+Allerdings ist es dann nicht mehr möglich den gesamten Probenhalter so weit zurückzufahren, dass der Faraday cup auf die gleiche Stelle entlang der Strahlachse gesetzt werden kann.
 \begin{figure}
     \begin{subfigure}[t]{0.478\textwidth}
       \includegraphics[width=\textwidth]{./fig/schleuse_freecad.png}
@@ -56,7 +55,7 @@ Allerdings ist es dann nicht mehr möglich den gesamten Probenhalter so weit zur
       \caption{}
       \label{fig:schleuse_real}
     \end{subfigure}
-    \caption{Innenraum der Schleuse, (a) Modell und (b) Foto der eingebauten Ionenoptiken. Durch isolierte Kabel welche nach außen geführt sind können Spannungen an die einzelnen Elemente gelget werden.}
+    \caption{Innenraum der Schleuse: (a) Modell und (b) Foto der eingebauten Ionenoptiken. Durch isolierte Kabel, welche nach außen geführt sind können Spannungen an die einzelnen Elemente gelegt werden.}
     \label{fig:schleuse_innen}
 \end{figure}
 
@@ -65,19 +64,19 @@ Allerdings ist es dann nicht mehr möglich den gesamten Probenhalter so weit zur
 Mithilfe der Programms SIMION \cite{Manura.2008} wurde der gesamte bisherige Aufbau im Rahmen der Dissertation von Chunrong Yin \cite{Yin.2007} simuliert.
 Diese Arbeit beschränkt sich daher auf die Simulation der Ionenoptiken in der Schleusenkammer.
 Die Simulation erfolgt mit der SIMON Version 8.1.1.32 und die Information bezüglich des Programms weden dem Benutzerhandbuch entnommen.
-Ziel ist es ein Verständnis für die Funktionsweise von Ionenoptiken zu erhalten und gegebenfalls die für den Betrieb benötigten Spannungen zu erhalten.
+Ziel ist es ein Verständnis für die Funktionsweise von Ionenoptiken zu erhalten und gegebenenfalls die für den Betrieb benötigten Spannungen zu erhalten.
 
 \subsection{Einstieg}
-Im ersten Schritt wird auf einem Gitter eine Punktmatrix aus verschiedenen Elektroden erstellt welche dann das gewünschte Modell bilden.
+Im ersten Schritt wird auf einem Gitter eine Punktmatrix aus verschiedenen Elektroden erstellt, welche dann das gewünschte Modell bilden.
 Dann berechnet SIMION das elektrische Potential für jede Stelle im Gitter durch Lösen der Laplace Gleichung mit den Elektroden als Randbedingungen.
 Den Elektroden werden Potentiale zugeordnet, die Ionen können definiert werden und die Simulation der Ionenflugbahn kann starten.
 Der simulierte Aufbau ist exemplarisch in Abb. \ref{fig:simion_schleuse} zu sehen.
 Für die Ionenflugbahn wurden sowohl konvergente (blaue Linien) als auch divergente (grüne Linien) Startbedingungen betrachtet.
 Zu sehen ist die Seitenansicht des gesamten Strahlverlaufs vom Ausgang des Massenselektors bis zum Auftreffen auf den Faraday cup.
 In Abb. \ref{fig:0} wird das Auftreffen der Ionen auf den Faraday cup in der Schleusenkammer näher betrachtet.
-Um die Wirkungsweise von Ionenoptiken zu verstehen kann ein Ansichtsmodus (der \textit{PE View}) genutzt werden, bei dem die potentiellen Energieflächen einer Schnittebene zu sehen sind, siehe Abb. \ref{fig:1}.
+Um die Wirkungsweise von Ionenoptiken zu verstehen, kann ein Ansichtsmodus (der \textit{PE View}) genutzt werden, bei dem die potentiellen Energieflächen einer Schnittebene zu sehen sind, siehe Abb. \ref{fig:1}.
 Diese potentiellen Energieflächen haben eine echte physikalische Bedeutung für die Ionen in den elektrostatischen Instanzen.
-Die Ionenflugbahn lässt sich mit einem Ball vergleichen welcher Hügel hinauf und herab rollt.
+Die Ionenflugbahn lässt sich mit einem Ball vergleichen, welcher Hügel hinauf und herab rollt.
 % \begin{figure}
 %     \centering
 %     \includegraphics[width=\textwidth]{./fig/simion_schleuse.png}
@@ -101,12 +100,12 @@ Die Ionenflugbahn lässt sich mit einem Ball vergleichen welcher Hügel hinauf u
     \caption{}
     \label{fig:2}
   \end{subfigure}
-  \caption{Simulation mit SIMION, in blau wird ein konvergenter Strahl angesetzt und in grün wird mit divergenten Anfangsbedingungen gestartet. (a) 3D Iso Ansicht der Ionenoptiken in der Schleusenkammer. (b) \textit{PE View} einer Schnittebene, Kammerwand geerdet, Depotube \SI{-500}{\volt}, Blende \SI{-50}{\volt} und Faraday cup \SI{-50}{\volt}. (c) Seitenansicht der simulierten Optiken im Übergang bis zur Schleuse.}
+  \caption{Simulation mit SIMION, in Blau wird ein konvergenter Strahl angesetzt und in Grün wird mit divergenten Anfangsbedingungen gestartet. (a) 3D Iso Ansicht der Ionenoptiken in der Schleusenkammer. (b) \textit{PE View} einer Schnittebene, zu sehen sind die potentiellen Energieflächen. Die angelegten Spannungen sind: Kammerwand geerdet, Depotube \SI{-500}{\volt}, Blende \SI{-50}{\volt} und Faraday cup \SI{-50}{\volt}. (c) Seitenansicht der simulierten Optiken im Übergang bis zur Schleuse.}
   \label{fig:simion_schleuse}
 \end{figure}
 \subsection{Fokussierung des Ionenstrahls}
 \label{sec:fokus1}
-Im folgenden soll die fokussierende Wirkung der Ionenoptiken betrachtet werden.
+Im Folgenden soll die fokussierende Wirkung der Ionenoptiken betrachtet werden.
 Nach dem Austreten des Massenselektors passieren die Ionen die M-tube und werden mit der Depotube und der Blende weiter in die Schleusenkammer geleitet bis sie auf den Faradaycup treffen.
 Die Flugbahn der Ionen wurde für divergente und konvergente Startbedingungen untersucht.
 \begin{figure}
@@ -128,29 +127,30 @@ Betrachtet wurden in jedem Durchlauf einfach positiv geladene Ionen mit einer Ma
 Wobei sich für unterschiedliche Massen, außerhalb des Massenselektors, die gleiche Fokussierung ergibt
 und lediglich auf anderen Zeitskalen stattfindet.
 Dies lagt daran, dass bei gleicher Energie pro Cluster die schweren Cluster eine geringere Geschwindigkeit haben und im Gegensatz zum Massenselektor die Spannungen zeitlich konstant sind.
-% durch die zeitlich begrenzten Pulse im Massenselektor eine Aufspaltung erreicht wird.
 Die Ionen wurden auf einer Kreisfläche mit $\SI{10}{\mm}$ Durchmesser verteilt und hatten eine Energie von $\SI{500}{\eV}$, siehe Abb. \ref{fig:simion_start}.
-Simuliert wurden die Ionentrajektorien von jeweils 5000 Ionen, wobei ein konvergenter (blau) und ein divergenter (grün) Austritt mit $\pm\,\SI{1}{\degree}$ des Massenselektors angenommen wurde.
-
-
-
+Simuliert wurden die Ionentrajektorien von jeweils 5000 Ionen, wobei ein konvergenter (blau) und ein divergenter (grün) Austritt mit $\pm\,\SI{1}{\degree}$ des Massenselektors angenommen wurde.\\
 
 Außerdem wurden die Positionen der Auftreffpunkte der Ionen für die jeweiligen Parameter in Heatmaps aufgetragen, um eine Aussage über den Fokus treffen zu können, hierbei ist es wichtig auf die Abmessungen zu achten.
 Beispielhafte Ergebnisse für die Strahlführung finden sich in Abb. \ref{fig:simion_konv} und Abb. \ref{fig:simion_div}.
 Der Faraday Cup lag dabei immer auf einem Potential von $\SI{-50}{\volt}$, da dies der Spannung entspricht welche im Betrieb angelegt wird.\\
 
 Bei beiden Strahlformen ist zu erkennen, dass bei Abwesenheit der Depositionsoptiken ein Großteil der Ionen den Faraday cup nicht erreicht und stattdessen vorher mit der Kammerwand beziehungsweise der M-tube kollidiert, vgl Abb. \ref{fig:konv0} und \ref{fig:div0}.
-Im nächsten Schritt werden sowohl Depotube als auch Blende eingbaut und an beide eine Spannung von $\SI{-500}{\volt}$ angelegt, dies entspricht der sogenannten \textit{floating voltage}, welche dann genutzt wird wenn der Clusterstrahl nicht beeinflusst werden soll.
+Im nächsten Schritt werden sowohl Depotube als auch Blende eingebaut und an beide eine Spannung von $\SI{-500}{\volt}$ angelegt, dies entspricht der sogenannten \textit{floating voltage}, welche dann genutzt wird, wenn der Clusterstrahl nicht beeinflusst werden soll.
 Dadurch können für den konvergenten Strahl alle und für den divergenten Strahl der Großteil der Ionen bis zum Faraday cup gelangen.\\
 
-Bei dem konvergeten Strahl verteilen sich die Ionen auf einem Kreis mit $\SI{14}{\mm}$ Durchmesser, da das Ionenpaket beim Übergang zwischen Blende und Faraday Cup defokussiert wird, siehe Abb. \ref{fig:konv2}.
+Bei dem konvergenten Strahl verteilen sich die Ionen auf einem Kreis mit $\SI{14}{\mm}$ Durchmesser, da das Ionenpaket beim Übergang zwischen Blende und Faraday Cup defokussiert wird, siehe Abb. \ref{fig:konv2}.
 Durch Anlegen von $\SI{-50}{\volt}$ an die Blende, welches dem Potential des Faraday cups entspricht, wird eine Fokussierung des Ionenpakets auf etwa $\SI{3,5}{\mm}$ Durchmesser erreicht.
 Allerdings befinden sich die Ionen vorwiegend auf dem Rand des Kreises, da die weiter außen befindlichen Ionen stärker abgelenkt werden.
-Im weiteren Schritt kann durch eine Spannung $\SI{-250}{\volt}$ an der M-tube ein Fokus von weniger als $\SI{0,3}{\mm}$ erzielt werden, da die Ionen über eine längere Srecke fokussiert werden können.\\
+Im weiteren Schritt kann durch eine Spannung $\SI{-250}{\volt}$ an der M-tube ein Fokus von weniger als $\SI{0,3}{\mm}$ erzielt werden, da die Ionen über eine längere Strecke fokussiert werden können.\\
 
 Wenn an Depotube und Blende $\SI{-500}{\volt}$ anliegen, dann verteilen sich die Ionen des divergenten Strahls auf der ganzen Fläche des Faraday Cups und viele Ionen fliegen am Faraday cup vorbei, vgl Abb. \ref{fig:div2}.
 Auch hier kann durch $\SI{-50}{\volt}$ an der Blende eine Fokussierung von einem Teil des Ionen erreicht werden, der Durchmesser der Trefferfläche ist etwa $\SI{6}{\mm}$.
-Durch Anlegen von $\SI{-1020}{\volt}$ an die Depotube ergibt sich ein Fokus mit weniger als $\SI{2}{\mm}$ Durchmesser auf dem Faraday cup.
+Durch Anlegen von $\SI{-1020}{\volt}$ an die Depotube ergibt sich ein Fokus mit weniger als $\SI{2}{\mm}$ Durchmesser auf dem Faraday cup.\\
+
+Die experimentellen Parameter, z.B. die für das Vermessen des Strahlsfokus (siehe Kapitel \ref{sec:strahlfokus}), sind M-tube $\SI{-600}{\volt}$, Depotube $\SI{-500}{\volt}$, Blende $\SI{-72}{\volt}$ und Faraday cup $\SI{-50}{\volt}$.
+Diese und ähnliche Spannungen werden in der Realität für die Fokussierung des Clusterstrahls benötigt und weichen von den simulierten Parametern ab.
+Es ist zwar möglich ein Verständnis und eine Abschätzung für die anzulegenden Spannungen zu erhalten aber eine nachträgliche Optimierung ist dennoch nötig.
+
 
 % \begin{figure}
 %   \centering
@@ -304,8 +304,7 @@ Durch Anlegen von $\SI{-1020}{\volt}$ an die Depotube ergibt sich ein Fokus mit 
 
 
 \section{Strahlfokus}
-% Strom 4 pA für Fe1 siehe FC messung in Abh von x
-% stabilen und starken
+\label{sec:strahlfokus}
 Mit dem  Signal von Fe$_1$ wurde der Fokus des Ionenstrahls in der Schleusenkammer untersucht.
 Für große Cluster war dies wegen des niedrigen Signal-Rausch-Verhältnisses nicht möglich, allerdings ist der untersuchte Fokus unabhängig von der Clustermasse, siehe Abschnitt \ref{sec:fokus1}.
 Der Faraday cup wurde entlang einer Achse senkrecht zum Strahl bewegt und der Ionenstrom gemessen, siehe Abb. \ref{fig:faltung}.
@@ -347,7 +346,7 @@ Im Folgenden werden jedoch kurz die Massenspektren von kleinen bis mittleren Eis
 In Abbildung \ref{fig:cluster_chtr} sind Massenspektren für Eisencluster mit einer Größe von $Fe_{1}$ bis $Fe_{26}$ zu sehen.
 Wegen der endlichen Massenauflösung ergibt sich kein diskretes Spektrum mit Deltapeaks.
 Es besteht jedoch die Möglichkeit das Signal mit mehreren Gaußfunktionen oder einem Cosinus-Fit zu nähern und so die Massenauflösung zu bestimmen \cite[S. 94 ff.]{krause}.
-Diese errgibt sich über folgenden Zusammenhang
+Diese ergibt sich über folgenden Zusammenhang
 \begin{align}
   \frac{m}{\Delta m} = \frac{1}{n} \sum\limits_{i} \frac{x_{c,i}}{2 \sigma_i},
 \end{align}
@@ -360,10 +359,6 @@ Hierfür wird ein linearer Fit mit
 \end{align}
 durchgeführt, wobei $N\left(m\right)$ die Anzahl der Atome pro Cluster bei gegebener Masse ist, die Steigung gleich der inversen Masse von Eisen in atomaren Einheiten entspricht und $m_{\text{offset}}$ den Versatz der Masse in den Spektren berücksichtigt.
 Die Ergebnisse für zwei Messungen mit dem Channeltron und eine mit dem Faraday cup, siehe Abb. \ref{fig:cluster_fc}, sind in Tabelle \ref{tab:msfitdata} zusammengefasst.
-% ggf extrapolieren dazu
-% auf große cluster extrapolieren möglich, an den tagen keine spektren von kleineren clustern aufgenommen weil optimieren lange dauert, daher m lit genommen
-% ggf Litwert angeben zb Nist
-
 % \begin{figure}
 %   \begin{subfigure}[t]{0.475\textwidth}
 %     \includegraphics[width=\textwidth]{./fig/cluster_small.pdf}
@@ -390,7 +385,7 @@ Die Ergebnisse für zwei Messungen mit dem Channeltron und eine mit dem Faraday 
     \caption{}
     \label{fig:cluster_medium}
   \end{subfigure}
-  \caption{Massenspektren gemessen mit dem Channeltron, (a) von 50 - 600 u und (b) von 400 - 1500 u. An die Daten wurden Gaußfunktionen genähert und mit den Peakpositionen wurde ein lineare Regression durchgeführt.}
+  \caption{Massenspektren gemessen mit dem Channeltron, (a) von 50 - 600 u und (b) von 400 - 1500 u. An die Daten wurden Gaußfunktionen genähert und mit den Peakpositionen wurde eine lineare Regression durchgeführt.}
   \label{fig:cluster_chtr}
 \end{figure}
 
@@ -422,36 +417,34 @@ Die Ergebnisse für zwei Messungen mit dem Channeltron und eine mit dem Faraday 
 Durch die Justage der Quellenparameter und nachfolgenden Ionenoptiken konnten kleine bis mittlere Cluster sowohl mit dem Channeltron als auch mit dem Faraday cup in der Schleusenkammer nachgewiesen werden.
 Für die Erzeugung von großen Clustern ist eine Nachjustage nötig.
 Ein gängiges Verfahren ist es, sich auf immer höhere Massen zu setzen und das Signal Schritt für Schritt zu optimieren.
-Da der Strom in der Schleusenkammer jedoch zu gering war, wurde die Optimierung anhand des Signals im Channeltron durchgeführt.
-Bei der Quelle wird der Aggregationsbereichs vergrößert, die Helium Zufuhr verringert und
-die Irisöffnung verkleinert.
-Durch weitere Justage der Ionenoptiken konnte die Erzeugung großer Cluster realisiert werden, siehe Abb. \ref{fig:chtr_just}.
-Hierbei wurde der Strom der abfallenden Flanke des Maximums optimiert um größere Cluster zu erhalten.
-Nach dem Umschalten auf den Faraday cup muss insbesondere eine Justage der Elektrode erfolgen, welche vorher zum Ablenken in das Channeltron diente \ref{fig:mschtr}.
-In Abb. \ref{fig:fc_just} ist der Strom für große Cluster direkt nach dem Umschalten abgebildet, wobei starke periodische Schwankungen zu sehen sind, auf welche in \ref{sec:effekte} näher eingeangen wird.
-Ebenfalls zu sehen ist der optimierte Clusterstrom bei ausgeschalteter Kryopumpe, weil dadurch der Störeffekt nicht auftritt.
-
+Da der Strom in der Schleusenkammer jedoch zu gering war, wurde die Optimierung anhand des Signals im Channeltron durchgeführt, siehe Abb. \ref{fig:chtr_just}.
 \begin{figure}
   \centering
-  \includegraphics[width=\textwidth]{./fig/chtr_just.pdf}
-  \caption{Abgebildet sind beispielhafte Spektren des Ionenstroms während der Optimierung der Quellenparamater und Ionenoptiken, gemessen mit dem Channeltron.}
+  \includegraphics[width=0.8\textwidth]{./fig/chtr_just.pdf}
+  \caption{Abgebildet sind beispielhafte Spektren des Ionenstroms während der Optimierung der Quellenparamater und Ionenoptiken, gemessen mit dem Channeltron. Um größere Cluster zu erhalten wurde das Signal an einer Stelle der abfallenden Flanke betrachtet und maximiert, bis sich die Verteilung verschoben hat. Dieser Prozess wird mehrmals wiederholt und zur Kontrolle ein Spektrum über den gesamten Bereich gefahren.}
   \label{fig:chtr_just}
 \end{figure}
-
+Bei der Quelle wird der Aggregationsbereichs vergrößert, die Helium Zufuhr verringert und
+die Irisöffnung verkleinert.
+Durch weitere Justage der Ionenoptiken konnte die Erzeugung großer Cluster realisiert werden.
+Hierbei wurde der Strom der abfallenden Flanke des Maximums optimiert, um größere Cluster zu erhalten.
+Nach dem Umschalten auf den Faraday cup muss insbesondere eine Justage der Elektrode erfolgen, welche vorher zum Ablenken in das Channeltron diente \ref{fig:mschtr}.\\
+In Abb. \ref{fig:fc_just} ist der Strom für große Cluster direkt nach dem Umschalten abgebildet, wobei starke periodische Schwankungen zu sehen sind, auf welche in Kapitel \ref{sec:effekte} näher eingegangen wird.
+Ebenfalls zu sehen ist der optimierte Clusterstrom bei ausgeschalteter Kryopumpe, hier tritt der Störeffekt nicht auf.
 \begin{figure}
   \centering
-  \includegraphics[width=\textwidth]{./fig/fc_just.pdf}
-  \caption{Ionenstrom in der Schleusenkammer nach der Optimierung mit dem Channeltron. In rot das Signal direkt nach dem Umschalten bei eingeschalteter Kryopumpe. Die grüne Kurve ist das optimierte Signal bei ausgeschalteter Kryopumpe.}
+  \includegraphics[width=0.8\textwidth]{./fig/fc_just.pdf}
+  \caption{Ionenstrom in der Schleusenkammer nach der Optimierung mit dem Channeltron. In Rot das Signal direkt nach dem Umschalten bei eingeschalteter Kryopumpe. Trotz der starken Schwankungen lässt sich das Signal von großen Clustern bei etwa $(90)\cdot 10^3\,\text{u}$ mit $(1\pm 1)\,\SI{}{\pA}$ erkennen. Die gestrichelte grüne Kurve ist das optimierte Signal bei ausgeschalteter Kryopumpe, hier lies sich ein Strom von $(2)\,\SI{}{\pA}$ erreichen. Die periodischen Schwankungen werden in Kapitel \ref{sec:effekte} diskutiert.}
   \label{fig:fc_just}
 \end{figure}
-
-\section{Störeffekte}
+\clearpage
+\section{Gelöste experimentelle Probleme}
 \label{sec:effekte}
-kapitel noch unvollständig 1. perdiod schwankung 2. Gasdesorption 3. Quellenstabilität \\
-Für die Probenherstellung beziehungsweise die Untersuchung von Clustern ist ein hoher stabiler Clusterstrom essentiell.
+Für die Probenherstellung beziehungsweise die Untersuchung von Clustern ist ein hoher stabiler Clusterstrom essenziell.
 Eine Abschätzung für die Depositionszeit gab es in \ref{sec:depo} und ein Strom bis zu $\SI{2}{\pA}$ konnte in der Schleusenkammer für große Cluster realisiert werden, siehe Abb. \ref{fig:fc_just}.
 % Bei dem Betrieb der CSA gibt es allerdings unerwünschte Störeffekte wie Intensitätseinbrüche \cite[S. 45]{gust}.
-Im Rahmen dieser Arbeit wurden allerdings unerwünschte Effekte bei der Messung des Stroms und bei dem Betrieb der Clusterquelle beobachtet und sollen hier kurz aufgeführt werden.
+Im Rahmen dieser Arbeit wurden allerdings unerwünschte Effekte bei der Strommessung und dem Betrieb der Clusterquelle beobachtet.
+Diese Probleme und die Ursache beziehungsweise die Lösung sollen hier kurz aufgeführt werden.
 
 \subsection{Periodische Schwankungen und Gasdesorption}
 Einer der Störeffekte ist die periodische Schwnakung des Stroms, welche bei der Messung mit dem Faraday cup in der Schleusenkammer auftritt, siehe Abb. \ref{fig:fc_just}.
@@ -464,33 +457,128 @@ Das Ausschalten führt zu einer Erwärmung der zwei Kryostufen und damit zu eine
 Zu sehen ist dieses Verhalten in Abb. \ref{fig:desorp}, hier wurde die Kryopumpe ausgeschaltet und wiederholt ein Massenspektrum von $(1-200)\cdot 10^3\,\text{u}$ gefahren und der Druck in der Schleusenkammer gemessen.\\
 Nach den ersten beiden abgebildeten Spektren war die Kryopumpe etwa $\SI{6}{\min}$ aus und in den ersten beiden abgebildeten Messungen ist das schwache Signal von großen Eisenclustern noch zu erkennen.
 In den nächsten beiden Spektren ist der Druck um mehr als eine Größenordnung auf $10^{-5}\,\text{mbar}$ gestiegen und der gemessene Strom zwischenzeitlich auf etwa $\SI{1.2}{\pA}$.
+Der stark Druck- und Ionenstromabfall bei etwa $\SI{525}{\second}$ zeigt an, dass in einem ersten Schritt leicht gebundene Adsorbate desorbiert sind.
+Allerdings würden später weitere Adsorbate desorbieren und somit zu einer Verunreinigung beitragen. 
 Unabhängig von der Einstellung des Massenselektors kommt es zu einer Erhöhung des Ionenstroms, welcher nicht auf Cluster, sondern auf desorbierende Restgase zurückzuführen ist.
 Der Untergrund durch die Desorption ist in der Größenordnung des erwarteten Clusterstroms, daher ist während dieser Zeit keine Optimierung möglich.
+Das Problem von starkem Untergrundsignal tritt auch bei sehr niedrigem Drücken von $\SI{2e-10}{}\,\text{mbar}$ in Photoelektronenspektroskopie Messungen von Blei Clustern auf \cite{Senz.2009}. 
+Das Problem der Desorption lässt sich also vermutlich nicht vollständig vermeiden und die Kryopumpe sollte daher nicht langfristig ausgeschaltet bleiben.
 % Untergrund auch bei sehr niedrigem druck von $\SI{2e-10}{}\,\text{mbar}$ \cite{Senz.2009}
 \begin{figure}
   \centering
-  \includegraphics[width=\textwidth]{./fig/desorption.pdf}
+  \includegraphics[width=0.8\textwidth]{./fig/desorption.pdf}
   \caption{Ionenstrom in der Schleusenkammer nachdem die Kryopumpe ausgeschaltet wurde. Die einzelnen Datensätze sind aufeinanderfolgende Massenspekten von $(1-200)\cdot 10^3\,\text{u}$ welche $\SI{100}{\second}$ benötigten und chronologisch aufgetragen sind. Eingezeichnet ist der Druckverlauf in der Schleusenkammer sowie das schwache Signal von Eisenclustern.}
   \label{fig:desorp}
 \end{figure}
 
 \subsection{Quellenstabilität}
 \label{sec:leistung}
-Für die Depositon ist ein stabiler Ionenstrom essentiell, insbesondere dann, wenn die Depositionsdauer mehere Stunden beträgt.
+Für die Depositon ist ein stabiler Ionenstrom essentiell, insbesondere dann wenn die Depositionsdauer mehere Stunden beträgt.
 Allerdings hängt die Stabilität des Ionenstroms beziehungsweise der Clusterquelle von vielen Faktoren ab, wie z.B. Quellenleistung, Zusammensetzung und Stärke der Gaszufuhr sowie der Druck in der Quelle, Sputterleistung, Temperatur, Aggregationsvolumen und Potentiale der Ionenoptiken in der Quelle.
-Im folgenden soll die Abhängigkeit der Verteilung bei steigender und abfallender Quellenleistung beobachtet werden.
+Im Folgenden soll die Abhängigkeit der Verteilung bei steigender und abfallender Quellenleistung beobachtet werden.
 Dafür wurde der Ionenstrom im Channeltron gemessen und lediglich die Leistung variiert, siehe Abb. \ref{fig:leistung}.
-Bei dem lokalen Maxima bei kleineren Massen handelt es sich um einen \textit{parasitären Peak}, unter bestimmten Bedingungen können große Cluster den Massenselektor passieren obwohl eigentlich kleine Cluster ausgewählt werden, näheres siehe \cite{gust}.
+Bei dem lokalen Maximum bei kleineren Massen handelt es sich um einen \textit{parasitären Peak}, unter bestimmten Bedingungen können große Cluster den Massenselektor passieren, obwohl eigentlich kleine Cluster ausgewählt werden.
+Diese Fehlselektion kann durch den Einbau der sogenannten Kickerschaltung unterdrückt werden, näheres findet sich in der Masterarbeit von Philipp Gust \cite{gust}.\\
 Zunächst wurden zwei Spektren, bei der üblichen Quellenleistung von $\SI{12}{\watt}$, direkt nach Start der Quelle aufgenommen. 
 Auch ohne äußere Einwirkung verschiebt sich das Maximum der Verteilung von $\SI{62e3}{\amu}$ auf $\SI{67e3}{\amu}$ und der Ionenstrom steigt von 40 auf 70 a.E..
-Im weiteren Verlauf wurde die Leistung auf $\SI{25}{\watt}$ erhöht und dann auf $\SI{4}{\watt}$ abegsenkt.
-Das Maximum verschiebt sich mit steigender Leistung zu höheren Massen und auch die Itensität nimmt zu.
-Die Verringerung sorgt wiederrum für ein kleineres Maximum bei kleineren Massen.
+Im weiteren Verlauf wurde die Leistung auf $\SI{25}{\watt}$ erhöht und dann auf $\SI{4}{\watt}$ abegesenkt.
+Das Maximum verschiebt sich mit steigender Leistung zu höheren Massen und auch die Intensität nimmt zu.
+Die Verringerung sorgt wiederum für ein kleineres Maximum bei kleineren Massen.
 Hierbei wurde eine Hysterese der Peakpositionen beobachtet, was sich durch die Trägheit der Temperatur und die vergleichbar kurze Messzeit eines Spektrums erklären lässt.
-
+Die Veränderung der Peakposition und Intensität aufgrund von thermischen Effekten muss daher beim Betrieb der CSA berücksichtigt werden.
+Zu sehen ist dies in den Depositionsexperimenten, beschrieben in Kapitel \ref{sec:depoauswertung}.
+Dort wurde aufgrund der Verschiebung der Verteilung (siehe Abb. \ref{fig:seconddepo}) eine leicht höhere Clustermasse gewählt, um somit einen maximalen Clusterstrom während der Depositionszeit zu gewährleisten.
 \begin{figure}
   \centering
-  \includegraphics[width=\textwidth]{./fig/leistung.pdf}
+  \includegraphics[width=0.8\textwidth]{./fig/leistung.pdf}
   \caption{Massenspektren bei steigender und abnehmender Leistung der Clusterquelle. Messreihe erfolgte nach frischer Einkühlung der Quelle, daher wurden bei der üblichen Quellenleistung, von $\SI{12}{\watt}$ zwei aufeinanderfolgende Spektren gemessen. Zwischen den Spektren sind jeweils etwa $\SI{2}{\min}$ vergangen und die Messung erfolgte mit dem Channeltron. Die eingezeichneten Pfeile zeigen den Verlauf des Maximums an.}
   \label{fig:leistung}
 \end{figure}
+\subsection{Eisenablagerungen}
+Nach längerem Betrieb der Clusterquelle (mehrere Stunden) wurden starke Ablagerungen von Eisen auf der Hülse beobachtet, siehe Abb. \ref{fig:huelse} (vgl. Hülse ohne Ablagerungen Abb. \ref{fig:target1}).
+Diese Ablagerungen selbst stellten kein Problem dar, allerdings wurde im gleichen Zeitraum festgestellt, dass die Veränderung der Gaszufuhr in Kombination mit dem größeren Aggregationsbereich nicht für die erwartete Erzeugung große Cluster sorgte.
+Außerdem war die Einkerbung auch nach mehr als zehn Stunden Quellenbetrieb kaum gesputtert, stattdessen hat sich ein kleinerer Ring gebildet aus dem das Material abgetragen wurde.
+\begin{figure}
+  \centering
+  \includegraphics[width=0.5\textwidth]{./fig/Hülse4.png}
+  \caption{Starke Ablagerungen von Eisen (mehrere Millimeter) auf dem Rand der Hülse. Die Einkerbung war trotz mehrerer Stunden Quellenbetrieb kaum gesputtert, stattdessen hat sich ein kleinerer Ring (rote Markierung) gebildet aus dem Material abgetragen wurde.}
+  \label{fig:huelse}
+\end{figure}
+Die Ursache war die Verbindung zwischen der Gasleitung in der Anlage und dem weiterführendem Rohr der Hülse, siehe Abb. \ref{fig:huelse5}.
+In der Clusterquelle ist die Gaszufuhr von Helium und Argon vor dem Target über eine abnehmbare Hülse realisiert (vgl. \ref{fig:quelle}), welche in ein Edelstahlrohr eingeführt wird.
+Für den Übergang der beiden Rohre existierte bereits ein Rohr mit einem leicht größeren Innendurchmesser, welches zur Abdichtung dient, dieses war jedoch soweit zurückgefahren, dass die Verbindung nicht nahtlos war.
+Daher konnte vermutlich nur ein Teil des Gasstroms direkt vor das Target geleitet werden und der Sputterprozess lief nicht wie erwartet ab.
+Das einfache Verschieben des Rohrs ermöglichte einen ordnungsgemäßen Ablauf, vgl. \ref{fig:huelse4}.
+\begin{figure}
+  \begin{subfigure}[h]{0.8\textwidth}
+    \includegraphics[width=\textwidth]{./fig/gaszufuhr3.png}
+    \caption{}
+    \label{fig:huelse1}
+  \end{subfigure}
+  \begin{subfigure}[h]{0.8\textwidth}
+    \includegraphics[width=\textwidth]{./fig/gaszufuhr1.png}
+    \caption{}
+    \label{fig:huelse2}
+  \end{subfigure}
+  % \begin{subfigure}[h]{0.80\textwidth}
+  %   \includegraphics[width=\textwidth]{./fig/gaszufuhr6.png}
+  %   \caption{}
+  %   \label{fig:huelse3}
+  % \end{subfigure}
+  \begin{subfigure}[h]{0.8\textwidth}
+    \includegraphics[width=\textwidth]{./fig/gaszufuhr8.png}
+    \caption{}
+    \label{fig:huelse4}
+  \end{subfigure}
+  \caption{Seitenansicht des Quellenkopfes (a) mit der montierten und (b) mit demontierten Hülse. In Gelb markiert ist das Rohr für die Gaszufuhr, welches fest in der Quelle verbaut ist. Die abnehmbare Hülse hat ein Rohrstück, das in die Gaszufuhr eingeschoben wird. In (c) ist schematisch der Übergang der beiden Elemente zu, das grün markierte Rohr dient zur Abdichtung.}
+  \label{fig:huelse5}
+\end{figure}
+Während die neu auftauchenden Ablagerungen auf der Hülse auf die unzureichende Verbindung in der Gaszufuhr zurückzuführen war, ist die Ablagerung des Targetmaterials auf den anderen Elementen in der Quelle normal, siehe Abb. \ref{fig:oxidschicht}.\\
+Bei dem früheren Betrieb der Quelle mit Silber oder Kupfer Targets war dies kein Problem.
+Nachdem ein Target das Ende seiner Lebenszeit erreicht hat, werden die Elemente in der Clusterquelle gereinigt und ein neues Target eingebaut.
+Bei der Benutzung von Eisen kann es jedoch zu einem Problem mit den Ablagerungen kommen, denn die Eisenschicht auf den Ionenoptiken oxidiert im Laufe der Zeit und es bildet sich eine isolierende Schicht aus.
+Dadurch kann trotz der angelegten Spannungen keine zuverlässige Beeinflussung des Ionenstrahls erreicht werden, dies wirkt sich negativ auf den Clusterstrom aus.
+Aus diesem Grund ist bei der Verwendung des Eisentargets darauf zu achten, die Ionenoptiken in kleineren Zeitabständen von den Ablagerungen zu befreien.
+\begin{figure}
+  \begin{subfigure}[h]{0.37\textwidth}
+    \includegraphics[width=\textwidth]{./fig/Oxidschicht_Skimmer3.png}
+    \caption{}
+    \label{fig:Oxidschicht_Skimmer}
+  \end{subfigure}
+  \begin{subfigure}[h]{0.525\textwidth}
+    \includegraphics[width=\textwidth]{./fig/Oxidschicht_Iris-Ring.png}
+    \caption{}
+    \label{fig:Oxidschicht_Iris-Ring}
+  \end{subfigure}
+  \caption{Fotos der Eisenablagerungen (a) auf dem Skimmer und (b) auf Iris sowie Ring. Bei zunehmender Dicke der Eisenschicht in Kombination mit der Oxidation kann sich eine isolierende Schicht ausbilden. Durch diese ist eine zuverlässige Wirkungsweise der Ionenoptiken nicht mehr gegeben und der Clusterstrom ist geringer.}
+  \label{fig:oxidschicht}
+\end{figure}
+\subsection{Steuersoftware}
+Für die Steuerung des Massenselektors wurde von Chunrong Yin in seiner Dissertation \cite{Yin.2007} mit LabVIEW ein Programm erstellt.
+Mit diesem werden die diversen elektronischen Bauteile für die Massenselektion, verbunden über GPIB-Kabel (General Purpose Interface Bus), angesteuert.
+Eine der im Programm eingestellten Wartezeiten ist für die Kommunikation jedoch nicht mehr ausreichend und die Messung des Massenspektrums wird unterbrochen.
+Die ausgegebene Fehlermeldung gab lediglich die Auskunft über ein Problem im GPIB-Systems, weder die GPIB-Controller-Karten noch die Kabel waren verantwortlich.
+Durch das schrittweise Durchlaufen des Programms ließ sich der Fehler lokalisieren, siehe Abb. \ref{fig:Labview_Fehlerloesung}.
+Eine Erhöhung der Wartezeit konnte das Problem lösen, ohne sich negativ in der Geschwindigkeit der Messung bemerkbar zu machen.
+
+\begin{figure}
+  \begin{subfigure}{0.9\textwidth}
+    \includegraphics[width=\textwidth]{./fig/Labview_Fehler.png}
+    \caption{}
+    \label{fig:Labview_Fehler}
+  \end{subfigure}
+  \begin{subfigure}{0.9\textwidth}
+    \includegraphics[width=\textwidth]{./fig/Labview_Lösung.png}
+    \caption{}
+    \label{fig:Labview_Fehlerloesung}
+  \end{subfigure}
+  \caption{(a) Die Fehlermeldung gibt lediglich Auskunft über ein Problem im GPIB-Systems. (b) In Rot markiert ist der Fehlerursprung im LabVIEW Programm, die Wartezeit ist nicht mehr ausreichend und die Software gibt eine Fehlermeldung aus. Die Erhöhung der Wartezeit behebt das Problem, ohne sich negativ in der Geschwindigkeit der Messung bemerkbar zu machen.}
+  \label{fig:labview}
+\end{figure}
+
+% \begin{figure}
+%   \centering
+%   \includegraphics[width=\textwidth]{./fig/Labview_Lösung.png}
+%   \caption{In Rot markiert ist der Fehlerursprung im LabVIEW Programm, die Wartezeit ist nicht mehr ausreichend und die Software gibt eine Fehlermeldung aus. Die Erhöhung der Wartezeit behebt das Problem, ohne sich negativ in der Geschwindigkeit der Messung bemerkbar zu machen.}
+%   \label{fig:labview}
+% \end{figure}
